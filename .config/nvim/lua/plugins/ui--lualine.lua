@@ -1,0 +1,42 @@
+return {
+  -- Lualine
+  {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+    config = function()
+      require("lualine").setup({
+        options = {
+          disabled_filetypes = { 'dashboard', 'toggleterm' },
+          section_separators = { left = '', right = '' },
+          component_separators = { left = "╲", right = "╱" },
+        },
+        sections = {
+          lualine_x = { 'encoding', 'fileformat', { 'filetype' }, { 'lsp_status' } },
+        },
+        tabline = {
+          lualine_a = {
+            {
+              'buffers',
+              filetype_names = {
+                oil = 'Oil',
+                toggleterm = 'Terminal',
+              },
+              symbols = {
+                alternate_file = false,
+              },
+            }
+          },
+          lualine_b = {},
+          lualine_c = {},
+          lualine_x = {},
+          lualine_y = {
+            { 'datetime', style = '%Y-%m-%d %a' },
+          },
+          lualine_z = {
+            { 'datetime', style = '%H:%M' },
+          }
+        },
+      })
+    end,
+  },
+}

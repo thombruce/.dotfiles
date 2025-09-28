@@ -2,6 +2,7 @@ return {
   -- Oil File Explorer/Editor
   {
     'stevearc/oil.nvim',
+    enabled = true,
     ---@module 'oil'
     ---@type oil.SetupOpts
     opts = {
@@ -27,14 +28,4 @@ return {
     -- Lazy loading is not recommended because it is very tricky to make it work correctly in all situations.
     lazy = false,
   },
-  -- TODO: Assess whether this slows down startup too much.
-  --
-  --       We considered it alongside oil-git-status too, but there were
-  --       issues with that plugin recognising the correct git status of documents.
-  -- {
-  --   "benomahony/oil-git.nvim",
-  --   dependencies = { "stevearc/oil.nvim" },
-  --   lazy = false,
-  --   -- No opts or config needed! Works automatically
-  -- },
 }

@@ -1,6 +1,7 @@
 return {
   {
     'DrKJeff16/project.nvim',
+    enabled = true,
     dependencies = { -- OPTIONAL
       'nvim-lua/plenary.nvim',
       'nvim-telescope/telescope.nvim',

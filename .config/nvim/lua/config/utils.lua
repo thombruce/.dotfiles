@@ -2,6 +2,9 @@
 vim.filetype.add({
   extension = {
     toodles = "todotxt",
+    todo = "todotxt",
+    shop = "todotxt",
+    list = "todotxt",
   },
   filename = {
     ["todo.txt"] = "todotxt",

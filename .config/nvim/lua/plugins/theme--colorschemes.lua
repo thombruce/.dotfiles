@@ -8,7 +8,7 @@ return {
     -- set colorscheme at startup
     config = function()
       require("tokyonight").setup({
-        style = "moon",
+        style = "storm",
         transparent = vim.g.transparent_enabled,
       })
       vim.cmd.colorscheme("tokyonight")

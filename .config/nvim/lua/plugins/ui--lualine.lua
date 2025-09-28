@@ -6,6 +6,7 @@ return {
     config = function()
       require("lualine").setup({
         options = {
+          theme = 'catppuccin',
           disabled_filetypes = { 'dashboard', 'toggleterm' },
           section_separators = { left = '', right = '' },
           component_separators = { left = "╲", right = "╱" },

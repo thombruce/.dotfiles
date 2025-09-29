@@ -1,4 +1,11 @@
+-- Set leader key to space bar for quick access to custom
+-- operations
 vim.g.mapleader = " "
+
+-- Set the clipboard so that [y]ank, [d]elete and [p]aste
+-- operations will use the system clipboard
+-- (requires win32yank to be installed on Windows)
+vim.opt.clipboard = "unnamedplus"
 
 vim.keymap.set("n", "<leader>q", ":quitall<CR>")
 vim.keymap.set("n", "<leader>z", ":ZenMode<CR>")

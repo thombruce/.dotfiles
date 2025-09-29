@@ -14,31 +14,31 @@ return {
             { desc = '󰊳 Update', group = '@property', action = 'Lazy update', key = 'u' },
             {
               icon = ' ',
-              icon_hl = '@variable',
               desc = 'Files',
+              icon_hl = 'Label',
               group = 'Label',
               action = 'Telescope find_files',
               key = 'f',
             },
             -- TODO: Add live_grep to shortcuts for current directory
-
-            -- Apps and dotfiles were copied from suggested setup.
-            -- These functions don't actually exist. Suggest that
-            -- dotfiles link should open homedir dotfiles in file
-            -- view or .config/nvim. Not sure what the intention
-            -- of "Telescope app" would be.
-            -- {
-            --   desc = ' Apps',
-            --   group = 'DiagnosticHint',
-            --   action = 'Telescope app',
-            --   key = 'a',
-            -- },
-            -- {
-            --   desc = ' dotfiles',
-            --   group = 'Number',
-            --   action = 'Telescope dotfiles',
-            --   key = 'd',
-            -- },
+            {
+              desc = ' Search',
+              group = '@string',
+              action = 'Telescope live_grep cwd=',
+              key = '/'
+            },
+            {
+              desc = ' dotfiles',
+              group = 'Number',
+              action = 'Oil --float ~',
+              key = 'd',
+            },
+            {
+              desc = ' Settings',
+              group = "@operator",
+              action = "Oil --float ~/.config/nvim",
+              key = 's'
+            }
           },
           project = { action = 'Oil --float ' },
         },

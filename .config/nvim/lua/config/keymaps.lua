@@ -1,8 +1,5 @@
 vim.g.mapleader = " "
 
--- TODO: See if we can get Neogit completions here too via `complete=""` arg (may require custom function)
-vim.api.nvim_create_user_command("Git", "Neogit", { nargs = "*" })
-
 vim.keymap.set("n", "<leader>q", ":quitall<CR>")
 vim.keymap.set("n", "<leader>z", ":ZenMode<CR>")
 
@@ -13,6 +10,8 @@ vim.keymap.set("n", "<leader>ga", "<CMD>Neogit stage<CR>")
 -- vim.keymap.set("n", "<leader>gs", "<CMD>Neogit<CR>")
 -- vim.keymap.set("n", "<leader>gs", "<CMD>Neogit<CR>")
 -- vim.keymap.set("n", "<leader>gs", "<CMD>Neogit<CR>")
+vim.keymap.set("n", "<leader>gd", "<CMD>DiffviewOpen<CR>")
+vim.keymap.set("n", "<leader>gx", "<CMD>DiffviewClose<CR>") -- TODO: We only need this when Diffview is open
 
 vim.keymap.set("n", "<leader>tp", ":Telescope find_files<CR>")
 vim.keymap.set("n", "<leader>tf", ":Telescope live_grep<CR>")

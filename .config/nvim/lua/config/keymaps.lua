@@ -10,6 +10,14 @@ vim.opt.clipboard = "unnamedplus"
 vim.keymap.set("n", "<leader>q", ":quitall<CR>")
 vim.keymap.set("n", "<leader>z", ":ZenMode<CR>")
 
+vim.keymap.set("n", "<leader>fa", ":RainbowAlign<CR>") -- fa = "format" -> "align"
+-- TODO: RainbowAlign should only be bound to keys when viewing a CSV document.
+--       You should setup an autocmd to map the key when viewing a CSV file.
+--       You should also look into the use of { noremap = true, silent = true } options.
+--       What do these actually do? Specifically, what does noremap do? Is it useful?
+--       Intuitively, I guess that it means "don't allow this to be remapped" by some
+--       other utility. But I could be wrong about that.
+
 vim.keymap.set("n", "<leader>gs", "<CMD>Neogit<CR>")
 vim.keymap.set("n", "<leader>gc", "<CMD>Neogit commit<CR>")
 vim.keymap.set("n", "<leader>ga", "<CMD>Neogit stage<CR>")

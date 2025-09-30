@@ -10,6 +10,9 @@ vim.opt.clipboard = "unnamedplus"
 vim.keymap.set("n", "<leader>q", ":quitall<CR>")
 vim.keymap.set("n", "<leader>z", ":ZenMode<CR>")
 
+vim.keymap.set("n", "<leader>/n", "/")
+vim.keymap.set("n", "<leader>/c", ":noh<CR>")
+
 vim.keymap.set("n", "<leader>fa", ":RainbowAlign<CR>") -- fa = "format" -> "align"
 -- TODO: RainbowAlign should only be bound to keys when viewing a CSV document.
 --       You should setup an autocmd to map the key when viewing a CSV file.

@@ -1,8 +1,18 @@
+# Ignore all files and folders by default
 *
+
+# This .gitignore file!
 !.gitignore
 
+# .dotfiles Repository README
 !README.md
 
+# Configuration Folder
 !.config/
+
+# Configuration Files for Neovim
 !.config/nvim
 !.config/nvim/**/*
+
+# Configuration File for VisiData
+!.visidatarc

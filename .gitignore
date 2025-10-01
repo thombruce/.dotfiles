@@ -16,3 +16,6 @@
 
 # Configuration File for VisiData
 !.visidatarc
+
+# Configuration File for tmux
+!.tmux.conf

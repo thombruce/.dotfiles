@@ -27,11 +27,17 @@ return {
               action = 'Telescope live_grep cwd=',
               key = '/'
             },
+            -- {
+            --   desc = ' dotfiles',
+            --   group = 'Number',
+            --   action = 'Oil --float ~',
+            --   key = 'd',
+            -- },
             {
-              desc = ' dotfiles',
+              desc = ' Notes',
               group = 'Number',
-              action = 'Oil --float ~',
-              key = 'd',
+              action = 'Oil --float ~/docs/notes',
+              key = 'n',
             },
             {
               desc = ' Settings',

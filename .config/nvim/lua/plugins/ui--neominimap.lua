@@ -15,6 +15,7 @@ return {
 
         exclude_filetypes = {
           "dashboard",
+          "oil",
         },
 
         --- Used when `layout` is set to `float`

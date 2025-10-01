@@ -13,12 +13,12 @@ return {
           shortcut = {
             { desc = '󰊳 Update', group = '@property', action = 'Lazy update', key = 'u' },
             {
-              icon = ' ',
+              icon = ' ',
               desc = 'Files',
               icon_hl = 'Label',
               group = 'Label',
-              action = 'Telescope find_files',
-              key = 'f',
+              action = 'Oil --float ',
+              key = '-',
             },
             -- TODO: Add live_grep to shortcuts for current directory
             {
@@ -44,6 +44,12 @@ return {
               group = "@operator",
               action = "Oil --float ~/.config/nvim",
               key = 's'
+            },
+            {
+              desc = '󰩈 Quit',
+              group = "@error",
+              action = "quitall",
+              key = 'q'
             }
           },
           project = { action = 'Oil --float ' },

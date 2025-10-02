@@ -19,7 +19,7 @@ vim.keymap.set({ 'n', 't' }, '<C-l>', '<C-w>l')
 vim.keymap.set('n', '<C-g>', '<CMD>vsplit<CR>')
 vim.keymap.set('n', '<C-b>', '<CMD>split<CR>')
 
-vim.keymap.set("n", "<leader>q", ":quitall<CR>")
+vim.keymap.set("n", "<leader>q", ":quit<CR>")
 vim.keymap.set("n", "<leader>z", ":ZenMode<CR>")
 
 vim.keymap.set("n", "<leader>/n", "/")

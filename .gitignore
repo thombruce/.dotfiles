@@ -7,6 +7,8 @@
 # .dotfiles Repository README
 !README.md
 
+!todo.txt
+
 # Configuration Folder
 !.config/
 

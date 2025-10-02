@@ -26,6 +26,7 @@ Listing some of the other tools/utilities I have installed that are not mentione
 ### Utility
 
 - htop
+- pastel
 
 ### Just for fun...
 

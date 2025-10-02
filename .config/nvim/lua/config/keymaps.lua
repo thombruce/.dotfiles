@@ -7,6 +7,18 @@ vim.g.mapleader = " "
 -- (requires win32yank to be installed on Windows)
 vim.opt.clipboard = "unnamedplus"
 
+-- Quick Quit or Close Current Pane/Window
+vim.keymap.set("n", "<C-q>", "<CMD>quit<CR>")
+
+-- Split/Pane Navigation
+vim.keymap.set({ 'n', 't' }, '<C-h>', '<C-w>h')
+vim.keymap.set({ 'n', 't' }, '<C-j>', '<C-w>j')
+vim.keymap.set({ 'n', 't' }, '<C-k>', '<C-w>k')
+vim.keymap.set({ 'n', 't' }, '<C-l>', '<C-w>l')
+-- And Split/Pane creation
+vim.keymap.set('n', '<C-g>', '<CMD>vsplit<CR>')
+vim.keymap.set('n', '<C-b>', '<CMD>split<CR>')
+
 vim.keymap.set("n", "<leader>q", ":quitall<CR>")
 vim.keymap.set("n", "<leader>z", ":ZenMode<CR>")
 
@@ -21,15 +33,15 @@ vim.keymap.set("n", "<leader>fa", ":RainbowAlign<CR>") -- fa = "format" -> "alig
 --       Intuitively, I guess that it means "don't allow this to be remapped" by some
 --       other utility. But I could be wrong about that.
 
-vim.keymap.set("n", "<leader>gs", "<CMD>Neogit<CR>")
-vim.keymap.set("n", "<leader>gc", "<CMD>Neogit commit<CR>")
-vim.keymap.set("n", "<leader>ga", "<CMD>Neogit stage<CR>")
+vim.keymap.set("n", "<leader>g", "<CMD>Neogit<CR>")
+-- vim.keymap.set("n", "<leader>gc", "<CMD>Neogit commit<CR>")
+-- vim.keymap.set("n", "<leader>ga", "<CMD>Neogit stage<CR>")
 -- vim.keymap.set("n", "<leader>gs", "<CMD>Neogit<CR>")
 -- vim.keymap.set("n", "<leader>gs", "<CMD>Neogit<CR>")
 -- vim.keymap.set("n", "<leader>gs", "<CMD>Neogit<CR>")
 -- vim.keymap.set("n", "<leader>gs", "<CMD>Neogit<CR>")
-vim.keymap.set("n", "<leader>gd", "<CMD>DiffviewOpen<CR>")
-vim.keymap.set("n", "<leader>gx", "<CMD>DiffviewClose<CR>") -- TODO: We only need this when Diffview is open
+vim.keymap.set("n", "<leader>dv", "<CMD>DiffviewOpen<CR>")
+vim.keymap.set("n", "<leader>dx", "<CMD>DiffviewClose<CR>") -- TODO: We only need this when Diffview is open
 
 vim.keymap.set("n", "<leader>tp", ":Telescope find_files<CR>")
 vim.keymap.set("n", "<leader>tf", ":Telescope live_grep<CR>")
@@ -51,8 +63,8 @@ vim.keymap.set("n", "<leader>pcs", ":CellularAutomaton scramble<CR>")
 -- Next and Previous Buffer on Tab and Shift+Tab
 -- vim.keymap.set("n", "<Tab>", ":bnext<CR>")
 -- vim.keymap.set("n", "<S-Tab>", ":bprev<CR>")
-vim.keymap.set("n", "<C-n>", ":bnext<CR>")
-vim.keymap.set("n", "<C-b>", ":bprev<CR>")
+vim.keymap.set("n", "<C-m>", ":bnext<CR>")
+vim.keymap.set("n", "<C-n>", ":bprev<CR>")
 
 -- Open Telescope file finder with Ctrl+p
 vim.keymap.set("n", "<C-p>", "<cmd>Telescope find_files<CR>") -- Dropped hidden=true from the command - let's see if we can live without it
@@ -61,13 +73,13 @@ vim.keymap.set("n", "<C-p>", "<cmd>Telescope find_files<CR>") -- Dropped hidden=
 -- Unnecessary, as ToggleTerm can be opened with the enter key
 -- vim.keymap.set("n", "<C-m>", ":ToggleTerm<CR>")
 -- ...but commenting that out removes the enter option. Weird.
-vim.keymap.set("n", "<Enter>", ":ToggleTerm<CR>")
+vim.keymap.set("n", [[<C-\>]], ":ToggleTerm<CR>")
 
 -- Open Oil File Explorer / Editor with "-" key
 vim.keymap.set("n", "-", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
 
 -- Open Neogit with Ctrl+g
-vim.keymap.set("n", "<C-g>", ":Neogit<CR>")
+-- vim.keymap.set("n", "<C-g>", ":Neogit<CR>") -- CONFLICT with new bnext mapping
 
 ----
 -- Keymappings for ToggleTerm to be applied only when using the Terminal

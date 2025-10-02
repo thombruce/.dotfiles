@@ -21,24 +21,8 @@ local function edit_or_open()
   end
 end
 
--- open as vsplit on current node
-local function vsplit_preview()
-  local node = api.tree.get_node_under_cursor()
-
-  if node.nodes ~= nil then
-    -- expand or collapse folder
-    api.node.open.edit()
-  else
-    -- open file as vsplit
-    api.node.open.vertical()
-  end
-
-  -- Finally refocus on tree if it was lost
-  api.tree.focus()
-end
-
 -- global
-vim.api.nvim_set_keymap("n", "<C-h>", ":NvimTreeToggle<cr>", { silent = true, noremap = true })
+vim.api.nvim_set_keymap("n", "<C-f>", ":NvimTreeToggle<cr>", { silent = true, noremap = true })
 -- TODO: Prefer that this NvimTreeFocus if the tree is already open.
 
 -- on_attach

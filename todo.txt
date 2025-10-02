@@ -1,2 +1,2 @@
-2025-10-02 Consistent pane navigation keymappings in tmux (M-[hjkl]) and Neovim (C-[hjkl])
-2025-10-02 Consistent pane splitting shortcuts in tmux (M-[hv]) and Neovim (C-[hv]) - Avoid conflicts!
+x 2025-10-02 Consistent pane navigation keymappings in tmux (M-[hjkl]) and Neovim (C-[hjkl])
+x 2025-10-02 Consistent pane splitting shortcuts in tmux (M-[gb]) and Neovim (C-[gb]) - Avoid conflicts!

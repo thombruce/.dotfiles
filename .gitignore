@@ -16,6 +16,11 @@
 !.config/nvim
 !.config/nvim/**/*
 
+# Configuration Files for Yazi
+!.config/yazi
+!.config/yazi/**/*
+.config/yazi/flavors
+
 # Configuration File for VisiData
 !.visidatarc
 

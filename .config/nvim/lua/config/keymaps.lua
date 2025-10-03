@@ -19,11 +19,12 @@ vim.keymap.set({ 'n', 't' }, '<C-l>', '<C-w>l')
 vim.keymap.set('n', '<C-g>', '<CMD>vsplit<CR>')
 vim.keymap.set('n', '<C-b>', '<CMD>split<CR>')
 
-vim.keymap.set("n", "<leader>q", ":quit<CR>")
+vim.keymap.set("n", "<leader>q", ":quit<CR>", { desc = "Quit" })
 vim.keymap.set("n", "<leader>z", ":ZenMode<CR>")
 
-vim.keymap.set("n", "<leader>/n", "/")
-vim.keymap.set("n", "<leader>/c", ":noh<CR>")
+vim.keymap.set("n", "<leader>/", "", { desc = "Search" })
+vim.keymap.set("n", "<leader>/n", "/", { desc = "Search in buffer" })
+vim.keymap.set("n", "<leader>/x", ":noh<CR>", { desc = "Clear search" })
 
 vim.keymap.set("n", "<leader>fa", ":RainbowAlign<CR>") -- fa = "format" -> "align"
 -- TODO: RainbowAlign should only be bound to keys when viewing a CSV document.
@@ -40,9 +41,11 @@ vim.keymap.set("n", "<leader>g", "<CMD>Neogit<CR>")
 -- vim.keymap.set("n", "<leader>gs", "<CMD>Neogit<CR>")
 -- vim.keymap.set("n", "<leader>gs", "<CMD>Neogit<CR>")
 -- vim.keymap.set("n", "<leader>gs", "<CMD>Neogit<CR>")
+vim.keymap.set("n", "<leader>d", "", { desc = "Diffview" })
 vim.keymap.set("n", "<leader>dv", "<CMD>DiffviewOpen<CR>")
 vim.keymap.set("n", "<leader>dx", "<CMD>DiffviewClose<CR>") -- TODO: We only need this when Diffview is open
 
+vim.keymap.set("n", "<leader>t", "", { desc = "Telescope" })
 vim.keymap.set("n", "<leader>tp", ":Telescope find_files<CR>")
 vim.keymap.set("n", "<leader>tf", ":Telescope live_grep<CR>")
 vim.keymap.set("n", "<leader>tg", ":Telescope grep_string<CR>")
@@ -50,6 +53,7 @@ vim.keymap.set("n", "<leader>tg", ":Telescope grep_string<CR>")
 -- vim.keymap.set("n", "<leader>t", ":Telescope <CR>")
 -- vim.keymap.set("n", "<leader>t", ":Telescope <CR>")
 
+vim.keymap.set("n", "<leader>p", "", { desc = "Play" })
 vim.keymap.set("n", "<leader>pg", ":Golf easy<CR>") -- ":Golf today" is broken
 vim.keymap.set("n", "<leader>ps", ":SnakeStart<CR>")
 -- vim.keymap.set("n", "<leader>gt", ":Tetris<CR>") -- Disabled since it doesn't use HJKL

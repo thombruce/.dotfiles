@@ -1,3 +1,6 @@
+# TODO: .bashrc and associated bash files are now redundant
+#       Consider removing them from .dotfiles repo
+
 #
 # ~/.bashrc
 #
@@ -7,6 +10,4 @@
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-PS1='[\u@\h \W]\$' 
-
-alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+PS1='[\u@\h \W]\$'

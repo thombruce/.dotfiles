@@ -4,3 +4,6 @@
 [submodule ".config/waybar"]
 	path = .config/waybar
 	url = https://github.com/sejjy/mechabar
+[submodule ".config/wofi/catppuccin"]
+	path = .config/wofi/catppuccin
+	url = https://github.com/quantumfate/wofi

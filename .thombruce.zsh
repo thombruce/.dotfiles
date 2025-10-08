@@ -12,6 +12,10 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+# mise activate provides some additional mise functionality
+# and allows us to use installed versions of languages directly
+eval "$(/usr/bin/mise activate zsh)"
+
 # Explicitly should come near END of file (after compinit)
 eval "$(zoxide init zsh)"
 alias cd='z'

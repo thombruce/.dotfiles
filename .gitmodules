@@ -7,3 +7,6 @@
 [submodule ".config/wofi/catppuccin"]
 	path = .config/wofi/catppuccin
 	url = https://github.com/quantumfate/wofi
+[submodule ".config/tmux/plugins/catppuccin/tmux"]
+	path = .config/tmux/plugins/catppuccin/tmux
+	url = https://github.com/catppuccin/tmux.git

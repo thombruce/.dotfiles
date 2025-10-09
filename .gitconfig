@@ -3,3 +3,5 @@
 	name = Thom Bruce
 [credential]
 	helper = store
+[init]
+	defaultBranch = main

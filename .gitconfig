@@ -1,3 +1,5 @@
 [user]
 	email = thom@thombruce.com
 	name = Thom Bruce
+[credential]
+	helper = store

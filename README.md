@@ -6,6 +6,12 @@ Ah, that's right! I've just installed Arch Linux! What a rush!!
 
 My aim is to gradually enhance this environment, sharing my non-private configuration here as I add to it.
 
+## Default Tools Replaced
+
+1. ls with eza (and y [yazi] as a file manager)
+2. cat with bat
+3. cd with z (zoxide)
+
 ## TODO
 
 - [x] Install Zsh (I prefer it; I like the configurability of Zsh)

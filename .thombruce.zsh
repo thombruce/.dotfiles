@@ -4,6 +4,8 @@ alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
 alias ls='eza --icons=auto --level=2'
 
+alias cat='bat' # Paginates using less pkg. Use 'bat --paging=never' instead for a more cat-like default.
+
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"

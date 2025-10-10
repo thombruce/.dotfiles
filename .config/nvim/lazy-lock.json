@@ -22,7 +22,7 @@
   "nui.nvim": { "branch": "main", "commit": "de740991c12411b663994b2860f1a4fd0937c130" },
   "nvim-autopairs": { "branch": "master", "commit": "23320e75953ac82e559c610bec5a90d9c6dfa743" },
   "nvim-fountain": { "branch": "master", "commit": "2f0b2a39b52943b490e7d0a27da092e914ede344" },
-  "nvim-lspconfig": { "branch": "master", "commit": "e688b486fe9291f151eae7e5c0b5a5c4ef980847" },
+  "nvim-lspconfig": { "branch": "master", "commit": "623bcf08d5f9ff4ee3ce2686fa1f1947a045b1a5" },
   "nvim-notify": { "branch": "master", "commit": "8701bece920b38ea289b457f902e2ad184131a5d" },
   "nvim-surround": { "branch": "main", "commit": "a868c256c861044beb9794b4dd126480dcdfbdad" },
   "nvim-tetris": { "branch": "master", "commit": "d17c99fb527ada98ffb0212ffc87ccda6fd4f7d9" },
@@ -32,7 +32,7 @@
   "nvimesweeper": { "branch": "master", "commit": "a75828943e4279cd850ad6a6cff4c49238997573" },
   "oil.nvim": { "branch": "master", "commit": "919e155fdf38e9148cdb5304faaaf53c20d703ea" },
   "plenary.nvim": { "branch": "master", "commit": "b9fd5226c2f76c951fc8ed5923d85e4de065e509" },
-  "project.nvim": { "branch": "main", "commit": "ff702e3f7833a5868d25af6d78f697731be08a0b" },
+  "project.nvim": { "branch": "main", "commit": "e2eb0f1bfc067e0708814df389f97310c98360c5" },
   "rainbow_csv": { "branch": "master", "commit": "3dbbfd7d17536aebfb80f571255548495574c32b" },
   "ripgrep": { "branch": "master", "commit": "0407e104f611d623547897ca99d172673b31779f" },
   "snake.nvim": { "branch": "main", "commit": "055f43656b01d5500efffb068c11c5bd3e7914e3" },
@@ -43,5 +43,6 @@
   "toggleterm.nvim": { "branch": "main", "commit": "50ea089fc548917cc3cc16b46a8211833b9e3c7c" },
   "twilight.nvim": { "branch": "main", "commit": "c2650ddf665df997e4c7f57d7ef0e7352d4678a7" },
   "which-key.nvim": { "branch": "main", "commit": "b4177e3eaf15fe5eb8357ebac2286d488be1ed00" },
+  "yadm-git.nvim": { "branch": "main", "commit": "bd6dc352bd344eb34d694b8e2c3bcf9a62ca032a" },
   "zen-mode.nvim": { "branch": "main", "commit": "438a59c33763d79e34ceb394e012c3bfd6aa1084" }
 }

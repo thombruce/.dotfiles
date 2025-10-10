@@ -1,5 +1,7 @@
 # Custom Config for Zsh
 
+export EDITOR='/usr/bin/nvim'
+
 # alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias dotfiles='yadm'
 

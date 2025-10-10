@@ -5,3 +5,8 @@
 	helper = store
 [init]
 	defaultBranch = main
+[push]
+	autoSetupRemote = true
+[alias]
+	s = status
+	co = checkout

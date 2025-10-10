@@ -12,6 +12,24 @@ My aim is to gradually enhance this environment, sharing my non-private configur
 2. cat with bat
 3. cd with z (zoxide)
 
+## Setup
+
+> _**Important!** These steps are not guaranteed to work._
+> _They were written sometime after/during complex setup._
+> _They will be amended as issues are discovered._
+
+First, I recommend installing [yadm](https://yadm.io/).
+
+Then, from your `$HOME` directory we should be able to run:
+
+```sh
+yadm clone https://github.com/thombruce/.dotfiles
+yadm submodule update --init --recursive # Is this correct? Will it obtain correct branches/commits?
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+```
+
+_These dotfiles contain configurations for other programs that should be installed manually._
+
 ## TODO
 
 - [x] Install Zsh (I prefer it; I like the configurability of Zsh)

@@ -33,12 +33,12 @@ return {
             --   action = 'Oil --float ~',
             --   key = 'd',
             -- },
-            -- {
-            --   desc = ' Notes',
-            --   group = 'Number',
-            --   action = 'Oil --float ~/docs/notes',
-            --   key = 'n',
-            -- },
+            {
+              desc = ' Notes',
+              group = 'Number',
+              action = 'Oil --float ~/notes',
+              key = 'n',
+            },
             {
               desc = ' Settings',
               group = "@operator",

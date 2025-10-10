@@ -6,6 +6,8 @@ alias vi='vim'
 alias vim='nvim'
 alias code='nvim'
 
+alias top='btop'
+
 alias ls='eza --icons=auto --level=2'
 
 alias cat='bat' # Paginates using less pkg. Use 'bat --paging=never' instead for a more cat-like default.

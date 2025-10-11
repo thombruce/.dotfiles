@@ -1,0 +1,27 @@
+#!/bin/bash
+
+
+SERVER=$(gum choose "Dedicated_IP" "p2p" "Switzerland" "United_States")
+
+# TODO: Allow "Other..." as a choice above and open full countries list:
+# SERVER=$(nordvpn countries | sed 's/ \+/\'$'\n''/g' | gum choose)
+
+[[ $SERVER == "" ]] && echo "Exiting..." && exit 1
+
+# NOTE: I clearly have no idea what [[]] and [] are doing.
+#       Something to do with a "sub-shell".
+#       I think the below conditionals might be incorrect,
+#       though they are working.
+
+if [ $SERVER != "p2p" ]; then
+	transmission-remote --exit
+fi
+
+# echo -e "Connecting to $SERVER..."
+nordvpn connect $SERVER
+
+if [ $SERVER == "p2p" ]; then
+  echo "Starting Transmission daemon..."
+  transmission-daemon
+  stig
+fi

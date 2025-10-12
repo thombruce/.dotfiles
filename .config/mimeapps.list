@@ -3,8 +3,22 @@ x-scheme-handler/mailto=userapp-Thunderbird-GLE8D3.desktop
 message/rfc822=userapp-Thunderbird-GLE8D3.desktop
 x-scheme-handler/mid=userapp-Thunderbird-GLE8D3.desktop
 image/png=com.interversehq.qView.desktop
+image/apng=com.interversehq.qView.desktop
+image/avif=com.interversehq.qView.desktop
+image/bmp=com.interversehq.qView.desktop
+image/gif=com.interversehq.qView.desktop
+image/jpeg=com.interversehq.qView.desktop
+image/tiff=com.interversehq.qView.desktop
+image/webp=com.interversehq.qView.desktop
 
 [Added Associations]
 x-scheme-handler/mailto=userapp-Thunderbird-GLE8D3.desktop;
 x-scheme-handler/mid=userapp-Thunderbird-GLE8D3.desktop;
 image/png=com.interversehq.qView.desktop;
+image/apng=com.interversehq.qView.desktop;
+image/avif=com.interversehq.qView.desktop;
+image/bmp=com.interversehq.qView.desktop;
+image/gif=com.interversehq.qView.desktop;
+image/jpeg=com.interversehq.qView.desktop;
+image/tiff=com.interversehq.qView.desktop;
+image/webp=com.interversehq.qView.desktop;

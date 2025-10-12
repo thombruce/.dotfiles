@@ -10,3 +10,4 @@
 [alias]
 	s = status
 	co = checkout
+	info = !which onefetch && onefetch

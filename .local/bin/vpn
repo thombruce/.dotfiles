@@ -14,6 +14,7 @@ SERVER=$(gum choose "Dedicated_IP" "p2p" "Switzerland" "United_States")
 #       though they are working.
 
 if [ $SERVER != "p2p" ]; then
+  systemctl stop jackett.service
 	transmission-remote --exit
 fi
 
@@ -23,5 +24,14 @@ nordvpn connect $SERVER
 if [ $SERVER == "p2p" ]; then
   echo "Starting Transmission daemon..."
   transmission-daemon
+  
+  # We're also going to start the Jackett search/indexing service
+  # NOTE: This requires additional permissions - to allow the user
+  # to initiate the action without a password, a Polkit rule needs
+  # to be created: https://wiki.archlinux.org/title/Polkit#Allow_a_user_to_use_the_org.freedesktop.timedate1.set-timezone_action
+  systemctl start jackett.service
+
+  # TODO: We should ask whether we want to search (using `raincoat [search term]`)
+  #       or view active torrents (using `stig` as below).
   stig
 fi

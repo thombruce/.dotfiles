@@ -58,3 +58,14 @@ I know it loads a separate `.p10k.zsh` file with additional setup.
 And at some point, we've wound up with the ohmyzsh/ohmyzsh repo cloned
 locally at `~/.oh-my-zsh`. I figure let's add that as a submodule.
 (I'd add a shrug emoji right here if I had an emoji keyboard configured right now, but I don't.)
+
+### On configuring caps lock to function as Esc or Ctrl...
+
+This resulted in no commits from my `$HOME` dotfiles directory, so let
+me just drop this here. This document is **GOSPEL**:
+
+- https://ejmastnak.com/tutorials/arch/caps2esc/
+
+_For some reason, this was a lot trickier to setup in Linux than it was_
+_in Windows. But follow that blogpost to the letter, and you achieve_
+_what is clearly a somewhat hacky solution._

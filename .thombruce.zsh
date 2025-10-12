@@ -9,6 +9,9 @@ alias vi='vim'
 alias vim='nvim'
 alias code='nvim'
 
+# Use `icat [image path]` to open an image in Kitty terminal
+alias icat='kitten icat'
+
 alias trash='gio trash'
 # Dependencies: glib2, gvfs
 # Useful commands:

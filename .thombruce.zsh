@@ -9,6 +9,13 @@ alias vi='vim'
 alias vim='nvim'
 alias code='nvim'
 
+alias trash='gio trash'
+# Dependencies: glib2, gvfs
+# Useful commands:
+# trash [file]
+# trash --list
+# trash --empty
+
 alias top='btop'
 
 alias ls='eza --icons=auto --level=2'

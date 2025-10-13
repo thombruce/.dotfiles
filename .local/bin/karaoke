@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Source: https://community.spotify.com/t5/Desktop-Linux/Commands-to-play-songs-and-playlists-from-terminal/m-p/802705/highlight/true#M5730
+# Slight modification needed (see final comment from 2017 - also change "album" to "playlist")
+
+# If you want to use this, just replace the playlist ID with your own
+# or replace playlist:[ID] with album:[ID] to play an album instead.
+
+spotify 1>/dev/null 2>&1 &
+
+sleep 3
+
+qdbus org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.OpenUri spotify:playlist:1GUhlUYgjbN12qKi6banhr

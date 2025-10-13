@@ -5,7 +5,17 @@ SERVER=$(gum choose "Dedicated_IP" "p2p" "Switzerland" "United_States")
 # TODO: Allow "Other..." as a choice above and open full countries list:
 # SERVER=$(nordvpn countries | sed 's/ \+/\'$'\n''/g' | gum choose)
 
+# TODO: Rewrite as a sort of "network options" script, rather than `vpn`
+#       It should have options for:
+#       - Syncing files (starts dropbox daemon)
+#       - General browsing (stops unneccessary daemons [e.g. Dropbox] and connects to Dedicate_IP on Nord)
+#       - p2p (starts transmission daemon, jackett daemon and asks if we'd like to search [raincoat] or open stig interface)
+#       - Increased privacy (connects to a VPN in a country with better user privacy [e.g. Switzerland])
+#       - Listing country servers (might list some commonly used ones like United_States, but we also want to filter and select from the whole list)
+
 [[ $SERVER == "" ]] && echo "Exiting..." && exit 1
+
+killall dropbox
 
 if [[ $SERVER != "p2p" ]]; then
   systemctl stop jackett.service
@@ -14,6 +24,11 @@ fi
 
 # echo -e "Connecting to $SERVER..."
 nordvpn connect $SERVER
+
+if [[ $SERVER == "Dedicated_IP" ]]; then
+  sleep 1
+  dropbox &
+fi
 
 if [[ $SERVER == "p2p" ]]; then
   echo "Starting Transmission daemon..."

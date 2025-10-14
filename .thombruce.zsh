@@ -35,7 +35,7 @@ function y() {
 
 # mise activate provides some additional mise functionality
 # and allows us to use installed versions of languages directly
-eval "$(/usr/bin/mise activate zsh)"
+eval "$(/home/thombruce/.local/bin/mise activate zsh)"
 
 # Explicitly should come near END of file (after compinit)
 eval "$(zoxide init zsh)"

@@ -5,7 +5,7 @@ declare -A visualizers
 # Sources:
 # - https://en.everybodywiki.com/List_of_BBC_radio_stream_URLs (I seem to be having the best success with Cloudfront URLs from here)
 visualizers=(
-  # ["Matrix"]="rusty-rain -C 0,139,139 -H 255,255,255 -g jap -s"
+  ["Matrix"]="rusty-rain -C 0,139,139 -H 255,255,255 -g jap -s"
   # TODO: Investigate/fix broken rusty-rain invocation.
   #       It works without args, but we want those args in place.
   ["Audio Visualizer"]="cava"
@@ -16,4 +16,4 @@ VIZ=$(gum choose "${!visualizers[@]}")
 
 [[ $VIZ == "" ]] && exit 1
 
-exec "${visualizers[$VIZ]}"
+eval "${visualizers[$VIZ]}"

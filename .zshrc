@@ -119,3 +119,6 @@ source $HOME/.thombruce.zsh
 
 # Created by `pipx` on 2025-10-09 17:00:49
 export PATH="$PATH:/home/thombruce/.local/bin"
+
+# Add .cargo/bin to path to run Rust programs
+export PATH="$PATH:$HOME/.cargo/bin"

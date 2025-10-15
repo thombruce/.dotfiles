@@ -32,7 +32,7 @@
   "nvimesweeper": { "branch": "master", "commit": "a75828943e4279cd850ad6a6cff4c49238997573" },
   "oil.nvim": { "branch": "master", "commit": "71948729cda5fc1b761d6ae60ff774b5525f1d50" },
   "plenary.nvim": { "branch": "master", "commit": "b9fd5226c2f76c951fc8ed5923d85e4de065e509" },
-  "project.nvim": { "branch": "main", "commit": "add606675082e01c3c6770aa292b1d8e68ef9400" },
+  "project.nvim": { "branch": "main", "commit": "2827c8aa46463e02eeb34db64ea52b21552f0248" },
   "rainbow_csv": { "branch": "master", "commit": "3dbbfd7d17536aebfb80f571255548495574c32b" },
   "ripgrep": { "branch": "master", "commit": "9ec08522bee566c8fbf03c340acd7a1ff1789a9f" },
   "snake.nvim": { "branch": "main", "commit": "055f43656b01d5500efffb068c11c5bd3e7914e3" },

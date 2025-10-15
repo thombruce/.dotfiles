@@ -42,5 +42,9 @@ if [[ $SERVER == "p2p" ]]; then
 
   # TODO: We should ask whether we want to search (using `raincoat [search term]`)
   #       or view active torrents (using `stig` as below).
+  # NOTE: We've moved away from raincoat due to issues installing... Python package resolution issues.
+  #       We're now using Cuff but it needs some work. We need to better format the options,
+  #       list them in order and allow for them to be selected. Should be able to do it all with
+  #       gum but it's gonna be a bit of work.
   stig
 fi

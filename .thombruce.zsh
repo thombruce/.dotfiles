@@ -1,5 +1,9 @@
 # Custom Config for Zsh
 
+if [[ -r "$HOME/.private.zsh" ]]; then
+  source "$HOME/.private.zsh"
+fi
+
 export EDITOR='/usr/bin/nvim'
 
 # alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'

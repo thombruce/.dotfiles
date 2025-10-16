@@ -2,4 +2,7 @@
 idiomatic_version_file_enable_tools = ["ruby", "node", "python", "yarn"]
 
 [tools]
+node = "system"
 python = "system"
+ruby = "system"
+rust = "system"

@@ -4,6 +4,10 @@ if [[ -r "$HOME/.private.zsh" ]]; then
   source "$HOME/.private.zsh"
 fi
 
+# Allow user-wide installation of NPM packages
+PATH="$HOME/.local/bin:$PATH"
+export npm_config_prefix="$HOME/.local"
+
 export EDITOR='/usr/bin/nvim'
 
 # alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'

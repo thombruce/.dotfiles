@@ -20,7 +20,6 @@ return {
       },
       float = {
         padding = 8,
-        border = "rounded",
       },
     },
     -- Optional dependencies

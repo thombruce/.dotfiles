@@ -27,7 +27,7 @@ nordvpn connect $SERVER
 
 if [[ $SERVER == "Dedicated_IP" ]]; then
   sleep 1
-  dropbox &
+  dropbox 1>/dev/null 2>&1 &
 fi
 
 if [[ $SERVER == "p2p" ]]; then

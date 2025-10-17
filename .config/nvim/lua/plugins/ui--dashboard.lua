@@ -36,7 +36,7 @@ return {
             {
               desc = ' Notes',
               group = 'Number',
-              action = 'Oil --float ~/notes',
+              action = 'Oil --float ~/Documents/notes',
               key = 'n',
             },
             {

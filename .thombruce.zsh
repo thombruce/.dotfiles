@@ -10,7 +10,7 @@ export npm_config_prefix="$HOME/.local"
 
 export EDITOR='/usr/bin/nvim'
 
-export DOOMWADDIR="${HOME}/roms/doom/IWADS"
+export DOOMWADDIR="${HOME}/Games/DOOM/IWADS"
 
 # alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias dotfiles='yadm'

@@ -4,13 +4,17 @@ if [[ -r "$HOME/.private.zsh" ]]; then
   source "$HOME/.private.zsh"
 fi
 
+# Results in a more expected sort order for non-alphanumeric
+# characters when using sort
+export LC_ALL=C
+
 # Allow user-wide installation of NPM packages
 PATH="$HOME/.local/bin:$PATH"
 export npm_config_prefix="$HOME/.local"
 
 export EDITOR='/usr/bin/nvim'
 
-export DOOMWADDIR="${HOME}/Games/DOOM/IWADS"
+export DOOMWADDIR="${HOME}/Games/DOOM/WADs"
 
 # alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias dotfiles='yadm'

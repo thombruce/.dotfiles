@@ -23,6 +23,12 @@ alias vi='vim'
 alias vim='nvim'
 alias code='nvim'
 
+# Assessing helix as a Neovim alternative - not sure I love it...
+# Might have the same issue as LazyVim, LunarVim and the like;
+# it's just preconfigured in a certain way and we prefer configuring
+# Neovim from scratch to our own liking
+alias hx='helix'
+
 # Use `icat [image path]` to open an image in Kitty terminal
 alias icat='kitten icat'
 

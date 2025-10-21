@@ -17,7 +17,7 @@ vim.keymap.set({ 'n', 't' }, '<C-k>', '<C-w>k')
 vim.keymap.set({ 'n', 't' }, '<C-l>', '<C-w>l')
 -- And Split/Pane creation
 vim.keymap.set('n', '<C-g>', '<CMD>vsplit<CR>')
-vim.keymap.set('n', '<C-b>', '<CMD>split<CR>')
+vim.keymap.set('n', '<C-y>', '<CMD>split<CR>')
 
 vim.keymap.set("n", "<leader>q", ":quit<CR>", { desc = "Quit" })
 vim.keymap.set("n", "<leader>z", ":ZenMode<CR>")
@@ -67,8 +67,8 @@ vim.keymap.set("n", "<leader>pcs", ":CellularAutomaton scramble<CR>")
 -- Next and Previous Buffer on Tab and Shift+Tab
 -- vim.keymap.set("n", "<Tab>", ":bnext<CR>")
 -- vim.keymap.set("n", "<S-Tab>", ":bprev<CR>")
-vim.keymap.set("n", "<C-m>", ":bnext<CR>")
-vim.keymap.set("n", "<C-n>", ":bprev<CR>")
+vim.keymap.set("n", "<C-n>", ":bnext<CR>")
+vim.keymap.set("n", "<C-b>", ":bprev<CR>")
 
 -- Open Telescope file finder with Ctrl+p
 vim.keymap.set("n", "<C-p>", "<cmd>Telescope find_files<CR>") -- Dropped hidden=true from the command - let's see if we can live without it

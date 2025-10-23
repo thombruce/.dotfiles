@@ -57,6 +57,8 @@ function y() {
 # and allows us to use installed versions of languages directly
 eval "$(/home/thombruce/.local/bin/mise activate zsh)"
 
+export MISE_DISABLE_TOOLS=["rust"]
+
 # Explicitly should come near END of file (after compinit)
 eval "$(zoxide init zsh)"
 alias cd='z'

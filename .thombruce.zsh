@@ -16,6 +16,9 @@ export EDITOR='/usr/bin/nvim'
 
 export DOOMWADDIR="${HOME}/Games/DOOM/WADs"
 
+# alias detach
+alias detach='udiskie-umount --detach'
+
 # alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias dotfiles='yadm'
 

@@ -1,0 +1,18 @@
+#!/bin/bash
+
+declare -A applications
+
+applications=(
+  ["Neovim"]="nvim"
+  ["Rusty Music Player Client"]="rmpc"
+  ["Stig"]="nordvpn connect p2p && transmission-daemon && stig"
+  ["btop"]="btop"
+  ["Yazi"]="yazi"
+  # ["pass"]="pass"
+)
+
+APP=$(gum choose "${!applications[@]}")
+
+[[ $APP == "" ]] && exit 1
+
+eval "${applications[$APP]}"

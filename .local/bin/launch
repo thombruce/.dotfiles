@@ -1,5 +1,7 @@
 #!/bin/bash
 
+clear
+
 declare -A applications
 
 applications=(
@@ -18,6 +20,7 @@ applications=(
   ["sc-im"]="TERM=xterm-256color sc-im"
   ["fend"]="fend"
   ["oxker"]="oxker"
+  ["jrnl"]="jrnl -to today"
 )
 
 APP=$(gum choose "${!applications[@]}")

@@ -12,15 +12,17 @@ applications=(
   ["Yazi"]="yazi"
   ["pass"]="pass"
   # ["Rainfrog"]="rainfrog" # Not yet installed, but it looks like my preferred dB manager
-  # ["abook"]="abook"
+  ["abook"]="abook"
   # ["mutt"]="mutt" # Not sure if I want this, Neomutt or some other mailer program (none seem to have image support)
-  # ["aerc"]="aerc" # aerc maybe, though I am only leaning this way because it's newer...
   # ["Bagels"]="bagels" # Interesting expense tracker, with the drawback that it isn't plaintext based
-  # ["calcure"]="calcure"
+  ["calcure"]="calcure"
   ["sc-im"]="TERM=xterm-256color sc-im"
   ["fend"]="fend"
   ["oxker"]="oxker"
   ["jrnl"]="jrnl -to today"
+  ["regect"]="regect"
+  # ["grex"]="grex" # Listed here as a reminder; requires arguments (which I may try to support here in future)
+  # ["pastel"]="pastel" # Also requires arguments
 )
 
 APP=$(gum choose "${!applications[@]}")

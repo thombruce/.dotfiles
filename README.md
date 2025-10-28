@@ -6,6 +6,20 @@ Ah, that's right! I've just installed Arch Linux! What a rush!!
 
 My aim is to gradually enhance this environment, sharing my non-private configuration here as I add to it.
 
+## Useful Commands
+
+```sh
+# Yazi file explorer
+y
+
+# Television fuzzy-finder
+tv
+
+# eza file list
+ls # list files with icons
+ls -T # list as a tree with depth 2
+```
+
 ## Default Tools Replaced
 
 1. ls with eza (and y [yazi] as a file manager)

@@ -1,7 +1,7 @@
 -- TODO: Also enable the pug-lsp language server (installed via Mason but we need the LSP config here too, I presume).
 
 local vue_language_server_path = vim.fn.expand '$MASON/packages' ..
-'/vue-language-server' .. '/node_modules/@vue/language-server'
+    '/vue-language-server' .. '/node_modules/@vue/language-server'
 local tsserver_filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' }
 local vue_plugin = {
   name = '@vue/typescript-plugin',

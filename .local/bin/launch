@@ -23,6 +23,7 @@ applications=(
   ["regect"]="regect"
   # ["grex"]="grex" # Listed here as a reminder; requires arguments (which I may try to support here in future)
   # ["pastel"]="pastel" # Also requires arguments
+  ["Television"]="tv"
 )
 
 APP=$(gum choose "${!applications[@]}")

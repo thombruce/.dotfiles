@@ -1,9 +1,10 @@
 #!/bin/bash
 
-SERVER=$(gum choose "Dedicated_IP" "p2p" "Switzerland" "United_States")
+SERVER=$(gum choose "Dedicated_IP" "p2p" "Switzerland" "United_States" "Other...")
 
-# TODO: Allow "Other..." as a choice above and open full countries list:
-# SERVER=$(nordvpn countries | sed 's/ \+/\'$'\n''/g' | gum choose)
+if [[ $SERVER == "Other..." ]]; then
+  SERVER=$(nordvpn countries | sed 's/ \+/\'$'\n''/g' | gum filter)
+fi
 
 # TODO: Rewrite as a sort of "network options" script, rather than `vpn`
 #       It should have options for:

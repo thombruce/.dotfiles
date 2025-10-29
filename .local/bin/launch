@@ -24,6 +24,8 @@ applications=(
   # ["grex"]="grex" # Listed here as a reminder; requires arguments (which I may try to support here in future)
   # ["pastel"]="pastel" # Also requires arguments
   ["Television"]="tv"
+  ["wttr.in"]="curl wttr.in/$HOMETOWN" # HOMETOWN should be set in environment
+  # ["ddgr"]="ddgr" # As above, requires additional arguments (a search term)
 )
 
 APP=$(gum choose "${!applications[@]}")

@@ -11,7 +11,7 @@ applications=(
   ["btop"]="btop"
   ["Yazi"]="yazi"
   ["pass"]="pass"
-  # ["Rainfrog"]="rainfrog" # Not yet installed, but it looks like my preferred dB manager
+  ["Rainfrog"]="rainfrog" # Installed (as is mariadb) but not set up
   ["abook"]="abook"
   # ["mutt"]="mutt" # Not sure if I want this, Neomutt or some other mailer program (none seem to have image support)
   # ["Bagels"]="bagels" # Interesting expense tracker, with the drawback that it isn't plaintext based
@@ -27,6 +27,7 @@ applications=(
   ["Television"]="tv"
   ["wttr.in"]="curl wttr.in/$HOMETOWN" # HOMETOWN should be set in environment
   # ["ddgr"]="ddgr" # As above, requires additional arguments (a search term)
+  ["radio"]="radio" # Custom script (a bit like this one)
 )
 
 APP=$(gum choose "${!applications[@]}")

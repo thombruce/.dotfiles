@@ -3,5 +3,10 @@ use = "XYenon/clipboard"
 rev = "9089f90"
 hash = "e6efc609de1b617c7e8e98efd5286221"
 
+[[plugin.deps]]
+use = "yazi-rs/plugins:git"
+rev = "8f1d971"
+hash = "63b6c222bf2103b3023389dde5e2ecfe"
+
 [flavor]
 deps = []

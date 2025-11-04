@@ -72,6 +72,7 @@ vim.keymap.set("n", "<C-b>", ":bprev<CR>")
 
 -- Open Telescope file finder with Ctrl+p
 vim.keymap.set("n", "<C-p>", "<cmd>Telescope find_files<CR>") -- Dropped hidden=true from the command - let's see if we can live without it
+vim.keymap.set("n", "<C-f>", "<cmd>Telescope live_grep<CR>")
 
 -- Open Terminal with Ctrl+m
 -- Unnecessary, as ToggleTerm can be opened with the enter key

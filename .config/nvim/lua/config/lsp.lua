@@ -7,6 +7,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
     if client:supports_method('textDocument/implementation') then
       -- Create a keymap for vim.lsp.buf.implementation ...
     end
+
+    if client.server_capabilities.inlayHintProvider then
+      vim.lsp.inlay_hint.enable(true)
+    end
+
     -- Enable auto-completion. Note: Use CTRL-Y to select an item. |complete_CTRL-Y|
     -- NOTE: I have disabled the below as the completion menu conflicts with blink
     -- if client:supports_method('textDocument/completion') then

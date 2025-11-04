@@ -15,6 +15,9 @@ return {
           return name == '..' or name == '.git'
         end,
       },
+      win_options = {
+        signcolumn = "yes:2",
+      },
       keymaps = {
         ["<Esc>"] = { "actions.close", mode = "n" },
       },

@@ -20,6 +20,13 @@ return {
           -- https://github.com/Isrothy/neominimap.nvim/issues/266
           window_border = "none" -- vim.fn.has("nvim-0.11") == 1 and vim.opt.winborder:get() or "single",
         },
+
+        click = {
+          -- Enable mouse click on the minimap
+          enabled = true,
+          -- Automatically switch focus to the minimap when clicked
+          auto_switch_focus = false,
+        },
       }
     end,
   }

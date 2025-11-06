@@ -4,6 +4,18 @@ return {
     version = "v3.x.x",
     lazy = false, -- NOTE: NO NEED to Lazy load
 
+    keys = {
+      -- Global Minimap Controls
+      { "<leader>nm", "<cmd>Neominimap Toggle<cr>",      desc = "Toggle global minimap" },
+
+      ---Focus Controls
+      { "<C-m>",      "<cmd>Neominimap ToggleFocus<cr>", desc = "Switch focus on minimap" },
+      -- NOTE: Due to legacy keyboard behaviours, this also remaps ENTER the same way.
+      -- (This should be solvable with the Kitty Keyboard Protocol (https://sw.kovidgoyal.net/kitty/keyboard-protocol/)
+      -- but I am not sure how to configure this... or even if I should. It ought to be enabled by default,
+      -- suggesting that Neovim's partial support may be the issue.)
+    },
+
     init = function()
       --- Put your configuration here
       vim.g.neominimap = {

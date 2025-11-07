@@ -34,6 +34,7 @@ applications=(
   #       of out of scope for this script. The below is provided as only an
   #       example of how we want to start the postgres daemon.
   # ["PostgreSQL"]="systemctl start postgresql.service"
+  ["GitUI"]="gitui"
 )
 
 APP=$(gum choose "${!applications[@]}")

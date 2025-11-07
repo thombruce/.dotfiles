@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Potential use for this?
+# Launching "stacks" - we could rename the file stack.
+# Think creating functions to group startups of
+# interoperable resources:
+# 1. postgres + valkey (redis)
+# 2. Specific VPN connection + Specific browser profile..?
+# 3. Other... ideas?
+# Speaking of that first option... I might almost prefer to be able
+# to choose multiple options from a select menu.
+
+dance() {
+  echo "Dancing"
+}
+
+sing() {
+  echo "Singing"
+}
+
+# This feels like a sketchy way to enable the
+# subcommands, but it works. Something to learn
+# and review in the future.
+eval $1

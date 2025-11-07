@@ -28,6 +28,12 @@ applications=(
   ["wttr.in"]="curl wttr.in/$HOMETOWN" # HOMETOWN should be set in environment
   # ["ddgr"]="ddgr" # As above, requires additional arguments (a search term)
   ["radio"]="radio" # Custom script (a bit like this one)
+  # TODO: We want an easy way to launch some of our database services
+  #       (MariaDB, PostgreSQL, Redis, etc.)
+  #       We also want to spin them down when not in use... so this is sort
+  #       of out of scope for this script. The below is provided as only an
+  #       example of how we want to start the postgres daemon.
+  # ["PostgreSQL"]="systemctl start postgresql.service"
 )
 
 APP=$(gum choose "${!applications[@]}")

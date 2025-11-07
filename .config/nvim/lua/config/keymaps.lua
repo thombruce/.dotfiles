@@ -56,7 +56,6 @@ vim.keymap.set("n", "<leader>tg", ":Telescope grep_string<CR>")
 vim.keymap.set("n", "<leader>p", "", { desc = "Play" })
 vim.keymap.set("n", "<leader>pg", ":Golf easy<CR>") -- ":Golf today" is broken
 vim.keymap.set("n", "<leader>ps", ":SnakeStart<CR>")
--- vim.keymap.set("n", "<leader>gt", ":Tetris<CR>") -- Disabled since it doesn't use HJKL
 vim.keymap.set("n", "<leader>pb", ":BlackJackNewGame<CR>")
 vim.keymap.set("n", "<leader>pn", ":Sudoku<CR>")
 vim.keymap.set("n", "<leader>pm", ":Nvimesweeper<CR>")
@@ -85,16 +84,3 @@ vim.keymap.set("n", "-", "<CMD>Oil --float<CR>", { desc = "Open parent directory
 
 -- Open Neogit with Ctrl+g
 -- vim.keymap.set("n", "<C-g>", ":Neogit<CR>") -- CONFLICT with new bnext mapping
-
-----
--- Keymappings for ToggleTerm to be applied only when using the Terminal
-----
-function _G.set_terminal_keymaps()
-  local opts = { buffer = 0 }
-  vim.keymap.set({ 't', 'n' }, '<esc>', [[<C-\><C-n>:ToggleTerm<CR>]], opts)
-  -- see https://github.com/akinsho/toggleterm.nvim for additional values you may want to set.
-end
-
--- if you only want these mappings for toggle term use term://*toggleterm#* instead
-vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
-----

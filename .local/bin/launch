@@ -35,6 +35,9 @@ applications=(
   #       example of how we want to start the postgres daemon.
   # ["PostgreSQL"]="systemctl start postgresql.service"
   ["GitUI"]="gitui"
+  ["LazyGit"]="lazygit"
+  # We're evaluating both GitUI and LazyGit for the time being...
+  # On first impression, LazyGit is very much winning.
 )
 
 APP=$(gum choose "${!applications[@]}")

@@ -53,16 +53,6 @@ vim.keymap.set("n", "<leader>tg", ":Telescope grep_string<CR>")
 -- vim.keymap.set("n", "<leader>t", ":Telescope <CR>")
 -- vim.keymap.set("n", "<leader>t", ":Telescope <CR>")
 
-vim.keymap.set("n", "<leader>p", "", { desc = "Play" })
-vim.keymap.set("n", "<leader>pg", ":Golf easy<CR>") -- ":Golf today" is broken
-vim.keymap.set("n", "<leader>ps", ":SnakeStart<CR>")
-vim.keymap.set("n", "<leader>pb", ":BlackJackNewGame<CR>")
-vim.keymap.set("n", "<leader>pn", ":Sudoku<CR>")
-vim.keymap.set("n", "<leader>pm", ":Nvimesweeper<CR>")
-vim.keymap.set("n", "<leader>pcr", ":CellularAutomaton make_it_rain<CR>")
-vim.keymap.set("n", "<leader>pcl", ":CellularAutomaton game_of_life<CR>")
-vim.keymap.set("n", "<leader>pcs", ":CellularAutomaton scramble<CR>")
-
 -- Next and Previous Buffer on Tab and Shift+Tab
 -- vim.keymap.set("n", "<Tab>", ":bnext<CR>")
 -- vim.keymap.set("n", "<S-Tab>", ":bprev<CR>")

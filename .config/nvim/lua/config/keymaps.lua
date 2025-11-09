@@ -16,8 +16,8 @@ vim.keymap.set({ 'n', 't' }, '<C-j>', '<C-w>j')
 vim.keymap.set({ 'n', 't' }, '<C-k>', '<C-w>k')
 vim.keymap.set({ 'n', 't' }, '<C-l>', '<C-w>l')
 -- And Split/Pane creation
-vim.keymap.set('n', '<C-g>', '<CMD>vsplit<CR>')
-vim.keymap.set('n', '<C-y>', '<CMD>split<CR>')
+vim.keymap.set('n', '<C-y>', '<CMD>vsplit<CR>')
+vim.keymap.set('n', '<C-u>', '<CMD>split<CR>')
 
 vim.keymap.set("n", "<leader>q", ":quit<CR>", { desc = "Quit" })
 vim.keymap.set("n", "<leader>z", ":ZenMode<CR>")

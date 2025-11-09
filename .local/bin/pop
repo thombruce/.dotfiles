@@ -1,0 +1,23 @@
+#!/bin/bash
+
+clear
+
+declare -A applications
+
+applications=(
+  ["abook"]="abook"
+  ["calcure"]="calcure"
+  ["fend"]="fend"
+  ["todo.txt"]="todo.sh list"
+  ["regect"]="regect"
+  ["Television"]="tv"
+  ["radio"]="radio" # Custom script (a bit like this one)
+  ["GitUI"]="gitui"
+  ["LazyGit"]="lazygit"
+)
+
+APP=$(gum choose "${!applications[@]}")
+
+[[ $APP == "" ]] && exit 1
+
+eval "${applications[$APP]}"

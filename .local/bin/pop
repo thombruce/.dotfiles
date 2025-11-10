@@ -12,7 +12,6 @@ applications=(
   ["regect"]="regect"
   ["Television"]="tv"
   ["radio"]="radio" # Custom script (a bit like this one)
-  ["GitUI"]="gitui"
   ["LazyGit"]="lazygit"
 )
 

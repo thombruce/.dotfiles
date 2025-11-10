@@ -1,5 +1,9 @@
 [settings]
 idiomatic_version_file_enable_tools = ["ruby", "node", "python", "yarn"]
+
+[tools]
+node = "24.10.0"
+ruby = "3"
 # node = "system"
 # python = "system"
 # ruby = "system"

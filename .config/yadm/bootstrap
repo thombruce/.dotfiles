@@ -1,0 +1,39 @@
+#!/bin/sh
+
+# https://yadm.io/docs/bootstrap
+
+# Because Git submodule commands cannot operate without a work tree, they must
+# be run from within $HOME (assuming this is the root of your dotfiles)
+cd "$HOME"
+
+echo "Init submodules"
+yadm submodule update --recursive --init
+
+# TODO: This doesn't belong here but it would be good to have a shortcut
+#       for opening LazyGit in a sort of "yadm mode". This can be achieved
+#       using the following snippet:
+
+# # yadm
+# function yc() {
+#     cd ~
+#     yadm enter lazygit
+#     cd -
+# }
+
+# Source: https://www.reddit.com/r/dotfiles/comments/ubgacd/comment/i6rxis5/
+
+# Strictly I don't think the cd parts are necessary but these cd into home before
+# launching LazyGit and cd back into the current (previous) working directory
+# after launch. I have just tested and `yadm enter lazygit` does actually work
+# from anywhere.
+
+# My preference in terms of verbiage would be something like...
+# 1. yadm lazygit
+# 2. yadm lazy
+# 3. lazygit yadm
+# 4. dotfiles lazy # (dotfiles being a pre-existing alias I used that is now aliased to yadm)
+
+# Items 1, 2 and 4 can be achieved by for instance creating a git alias...
+# however... this would be at conflict with a desirable alias like `git lazy` which...
+# yeah, could be useful too as an additional means of starting general-purpose lazygit.
+# So maybe prefer some other bash alias instead.

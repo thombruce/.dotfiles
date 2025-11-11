@@ -42,7 +42,13 @@ yadm submodule update --init --recursive # Is this correct? Will it obtain corre
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
 ```
 
+Alternatively, yadm should prompt you to run the `bootstrap` script upon cloning.
+This can also be run manually with the command `yadm bootstrap`.
+
 _These dotfiles contain configurations for other programs that should be installed manually._
+_Perhaps I can also automate this using `yadm bootstrap` (note that the script should remain idempotent,
+meaning any such automation should **either** install or update [or do nothing]--it should be runnable
+on existing setups)._
 
 ## TODO
 

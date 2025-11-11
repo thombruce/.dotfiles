@@ -10,4 +10,17 @@
 [alias]
 	s = status
 	co = checkout
-	info = !which onefetch && onefetch
+  info = !which onefetch && onefetch
+
+[core]
+  pager = delta
+[interactive]
+  diffFilter = delta --color-only
+[delta]
+  navigate = true    # use n and N to move between diff sections
+  # delta detects terminal colors automatically; set one of these to disable auto-detection
+  # dark = true
+  # light = true
+  side-by-side = true
+[merge]
+  conflictStyle = zdiff3

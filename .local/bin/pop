@@ -12,7 +12,11 @@ applications=(
   ["regect"]="regect"
   ["Television"]="tv"
   ["radio"]="radio" # Custom script (a bit like this one)
-  ["LazyGit"]="lazygit"
+  ["LazyGit"]="lazygit -sm full" # Added "-sm full" as the popup is too small to display side-by-side diff (using delta pager)
+  # NOTE: The popup is also too small to open diffview in Neovim (below).
+  #       We cannot modify the popup size on the fly, but we can set an initial width and height
+  #       to be significantly larger instead (I have done this for an alt+g shortcut that opens the full LazyGit view)
+  # ["Diff"]="nvim +DiffviewOpen ."
 )
 
 APP=$(gum choose "${!applications[@]}")

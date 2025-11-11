@@ -34,13 +34,8 @@ vim.keymap.set("n", "<leader>fa", ":RainbowAlign<CR>") -- fa = "format" -> "alig
 --       Intuitively, I guess that it means "don't allow this to be remapped" by some
 --       other utility. But I could be wrong about that.
 
-vim.keymap.set("n", "<leader>g", "<CMD>Neogit<CR>")
--- vim.keymap.set("n", "<leader>gc", "<CMD>Neogit commit<CR>")
--- vim.keymap.set("n", "<leader>ga", "<CMD>Neogit stage<CR>")
--- vim.keymap.set("n", "<leader>gs", "<CMD>Neogit<CR>")
--- vim.keymap.set("n", "<leader>gs", "<CMD>Neogit<CR>")
--- vim.keymap.set("n", "<leader>gs", "<CMD>Neogit<CR>")
--- vim.keymap.set("n", "<leader>gs", "<CMD>Neogit<CR>")
+vim.keymap.set("n", "<leader>g", "<CMD>DiffviewOpen<CR>")
+
 vim.keymap.set("n", "<leader>d", "", { desc = "Diffview" })
 vim.keymap.set("n", "<leader>dv", "<CMD>DiffviewOpen<CR>")
 vim.keymap.set("n", "<leader>dx", "<CMD>DiffviewClose<CR>") -- TODO: We only need this when Diffview is open
@@ -72,5 +67,5 @@ vim.keymap.set("n", [[<C-\>]], ":ToggleTerm<CR>")
 -- Open Oil File Explorer / Editor with "-" key
 vim.keymap.set("n", "-", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
 
--- Open Neogit with Ctrl+g
--- vim.keymap.set("n", "<C-g>", ":Neogit<CR>") -- CONFLICT with new bnext mapping
+-- Open Diffview with Ctrl+g
+vim.keymap.set("n", "<C-g>", ":DiffviewOpen<CR>")

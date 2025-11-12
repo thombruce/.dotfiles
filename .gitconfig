@@ -11,7 +11,7 @@
 	s = status
 	co = checkout
   info = !which onefetch && onefetch
-	graph = log --graph --format=\"%C(auto)%h %d %s %Cblue%an\" --decorate
+	graph = !serie # log --graph --format=\"%C(auto)%h %d %s %Cblue%an\" --decorate
 
 [core]
   pager = delta

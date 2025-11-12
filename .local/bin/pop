@@ -17,6 +17,7 @@ applications=(
   #       We cannot modify the popup size on the fly, but we can set an initial width and height
   #       to be significantly larger instead (I have done this for an alt+g shortcut that opens the full LazyGit view)
   # ["Diff"]="nvim +DiffviewOpen ."
+  ["serie"]="serie" # NOTE: We should also set this as the git graph alias, right?
 )
 
 APP=$(gum choose "${!applications[@]}")

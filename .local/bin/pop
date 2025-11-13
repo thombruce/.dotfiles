@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# TODO:
+# 1. Rename to 'overlay' as it is no longer used as a popup menu
+# 2. We could potentially unify pop and start... not sure about that though, as some programs still want
+#    independent tabs. We can however... pass instructions to kitty for proper handling?
+
 clear
 
 declare -A applications
@@ -8,16 +13,27 @@ applications=(
   ["abook"]="abook"
   ["calcure"]="calcure"
   ["fend"]="fend"
-  ["todo.txt"]="todo.sh list"
+  # NOTE: todo.txt removed and other programs omitted
+  # These print and exit, which is not suitable for this menu as the results
+  # do not persist. Perhaps we can negotiate with Kitty to have them work?
+  # For instance, we could prepend these commands with kitty tab/window instructions.
+  # Not very agnostic, but if the file is just for my own purposes...?
+  # Well yeah, what if I switch to WezTerm or Ghostty? Or want to give Alacritty a spin?
+  # I don't love that solution.
   ["regect"]="regect"
   ["Television"]="tv"
   ["radio"]="radio" # Custom script (a bit like this one)
-  ["LazyGit"]="lazygit -sm full" # Added "-sm full" as the popup is too small to display side-by-side diff (using delta pager)
-  # NOTE: The popup is also too small to open diffview in Neovim (below).
-  #       We cannot modify the popup size on the fly, but we can set an initial width and height
-  #       to be significantly larger instead (I have done this for an alt+g shortcut that opens the full LazyGit view)
-  # ["Diff"]="nvim +DiffviewOpen ."
+  ["LazyGit"]="lazygit" # Added "-sm full" as the popup is too small to display side-by-side diff (using delta pager)
   ["serie"]="serie" # NOTE: We should also set this as the git graph alias, right?
+
+  # Ported from custom start script
+  ["Rusty Music Player Client"]="rmpc"
+  ["Stig"]="nordvpn connect p2p && transmission-daemon && stig"
+  ["btop"]="btop"
+  ["Yazi"]="yazi"
+  ["Rainfrog"]="rainfrog" # Installed (as is mariadb) but not set up
+  ["sc-im"]="TERM=xterm-256color sc-im"
+  ["oxker"]="oxker"
 )
 
 APP=$(gum choose "${!applications[@]}")

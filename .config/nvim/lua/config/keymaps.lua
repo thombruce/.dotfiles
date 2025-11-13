@@ -19,6 +19,9 @@ vim.keymap.set({ 'n', 't' }, '<C-l>', '<C-w>l')
 vim.keymap.set('n', '<C-y>', '<CMD>vsplit<CR>')
 vim.keymap.set('n', '<C-u>', '<CMD>split<CR>')
 
+vim.keymap.set("n", "<leader>s", "", { desc = "Settings" })
+vim.keymap.set("n", "<leader>sa", "<CMD>Codeium Toggle<CR>", { desc = "Toggle AI" })
+
 vim.keymap.set("n", "<leader>q", ":quit<CR>", { desc = "Quit" })
 vim.keymap.set("n", "<leader>z", ":ZenMode<CR>")
 

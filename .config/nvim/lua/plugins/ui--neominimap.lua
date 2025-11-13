@@ -25,6 +25,7 @@ return {
           "dashboard",
           "oil",
           "markdown",
+          "telekasten",
           "fountain",
         },
 

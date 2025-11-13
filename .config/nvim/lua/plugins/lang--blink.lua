@@ -7,7 +7,10 @@ return {
     'saghen/blink.cmp',
     enabled = true,
     -- optional: provides snippets for the snippet source
-    dependencies = { 'rafamadriz/friendly-snippets' },
+    dependencies = {
+      'rafamadriz/friendly-snippets',
+      'Exafunction/windsurf.nvim',
+    },
 
     -- use a release tag to download pre-built binaries
     version = '1.*',
@@ -40,12 +43,46 @@ return {
       },
 
       -- (Default) Only show the documentation popup when manually triggered
-      completion = { documentation = { auto_show = true } },
+      completion = {
+        menu = {
+          -- auto_show = false,
+
+          direction_priority = { 'n', 's' },
+          -- NOTE: This is a simpler way to avoid conflicts with Windsurf's virtual_text
+          --       The below provides a more sophisticated solution that only works with
+          --       Blink's own ghost_text. But we can access the vim context, so...
+          --       Perhaps there is a way to modify it for dual-compatibility.
+          -- As of now, we have completion menu above and ghost/virtual text below.
+
+          -- Source: https://cmp.saghen.dev/recipes.html#avoid-multi-line-completion-ghost-text
+          -- direction_priority = function()
+          --   local ctx = require('blink.cmp').get_context()
+          --   local item = require('blink.cmp').get_selected_item()
+          --   if ctx == nil or item == nil then return { 's', 'n' } end
+
+          --   local item_text = item.textEdit ~= nil and item.textEdit.newText or item.insertText or item.label
+          --   local is_multi_line = item_text:find('\n') ~= nil
+
+          --   -- after showing the menu upwards, we want to maintain that direction
+          --   -- until we re-open the menu, so store the context id in a global variable
+          --   if is_multi_line or vim.g.blink_cmp_upwards_ctx_id == ctx.id then
+          --     vim.g.blink_cmp_upwards_ctx_id = ctx.id
+          --     return { 'n', 's' }
+          --   end
+          --   return { 's', 'n' }
+          -- end,
+        },
+        documentation = { auto_show = true },
+        ghost_text = { enabled = true },
+      },
 
       -- Default list of enabled providers defined so that you can extend it
       -- elsewhere in your config, without redefining it, due to `opts_extend`
       sources = {
-        default = { 'lsp', 'path', 'snippets', 'buffer' },
+        default = { 'lsp', 'path', 'snippets', 'buffer', 'codeium' },
+        providers = {
+          codeium = { name = 'Codeium', module = 'codeium.blink', async = true },
+        }
       },
 
       -- (Default) Rust fuzzy matcher for typo resistance and significantly better performance

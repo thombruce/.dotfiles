@@ -23,7 +23,11 @@ vim.keymap.set("n", "<leader>s", "", { desc = "Settings" })
 vim.keymap.set("n", "<leader>sa", "<CMD>Codeium Toggle<CR>", { desc = "Toggle AI" })
 
 vim.keymap.set("n", "<leader>q", ":quit<CR>", { desc = "Quit" })
-vim.keymap.set("n", "<leader>z", ":ZenMode<CR>")
+
+vim.keymap.set("n", "<leader>w", "", { desc = "Writing modes..." })
+vim.keymap.set("n", "<leader>wc", ":NoNeckPain<CR>", { desc = "Center Buffer" })
+vim.keymap.set("n", "<leader>wz", ":ZenMode<CR>", { desc = "Zen Mode" })
+vim.keymap.set("n", "<leader>z", ":ZenMode<CR>", { desc = "Zen Mode" })
 
 vim.keymap.set("n", "<leader>/", "", { desc = "Search" })
 vim.keymap.set("n", "<leader>/n", "/", { desc = "Search in buffer" })

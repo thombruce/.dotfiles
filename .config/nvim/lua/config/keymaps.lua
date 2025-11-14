@@ -24,15 +24,17 @@ vim.keymap.set("n", "<leader>sa", "<CMD>Codeium Toggle<CR>", { desc = "Toggle AI
 
 vim.keymap.set("n", "<leader>q", ":quit<CR>", { desc = "Quit" })
 
-vim.keymap.set("n", "<leader>w", "", { desc = "Writing modes..." })
-vim.keymap.set("n", "<leader>wc", ":NoNeckPain<CR>", { desc = "Center Buffer" })
-vim.keymap.set("n", "<leader>wz", ":ZenMode<CR>", { desc = "Zen Mode" })
-vim.keymap.set("n", "<leader>z", ":ZenMode<CR>", { desc = "Zen Mode" })
+-- vim.keymap.set("n", "<leader>w", "", { desc = "Writing modes..." })
+vim.keymap.set("n", "<leader>sc", ":NoNeckPain<CR>", { desc = "Toggle NoNeckPain" })
+vim.keymap.set("n", "<leader>sz", ":ZenMode<CR>", { desc = "Toggle Zen Mode" })
+
+vim.keymap.set("n", "<leader>z", ":ZenMode<CR>", { desc = "Toggle Zen Mode" })
 
 vim.keymap.set("n", "<leader>/", "", { desc = "Search" })
 vim.keymap.set("n", "<leader>/n", "/", { desc = "Search in buffer" })
 vim.keymap.set("n", "<leader>/x", ":noh<CR>", { desc = "Clear search" })
 
+vim.keymap.set("n", "<leader>f", "", { desc = "Format" })
 vim.keymap.set("n", "<leader>fa", ":RainbowAlign<CR>") -- fa = "format" -> "align"
 -- TODO: RainbowAlign should only be bound to keys when viewing a CSV document.
 --       You should setup an autocmd to map the key when viewing a CSV file.
@@ -41,11 +43,9 @@ vim.keymap.set("n", "<leader>fa", ":RainbowAlign<CR>") -- fa = "format" -> "alig
 --       Intuitively, I guess that it means "don't allow this to be remapped" by some
 --       other utility. But I could be wrong about that.
 
-vim.keymap.set("n", "<leader>g", "<CMD>DiffviewOpen<CR>")
-
-vim.keymap.set("n", "<leader>d", "", { desc = "Diffview" })
-vim.keymap.set("n", "<leader>dv", "<CMD>DiffviewOpen<CR>")
-vim.keymap.set("n", "<leader>dx", "<CMD>DiffviewClose<CR>") -- TODO: We only need this when Diffview is open
+vim.keymap.set("n", "<leader>g", "", { desc = "Git" })
+vim.keymap.set("n", "<leader>gd", "<CMD>DiffviewOpen<CR>")
+vim.keymap.set("n", "<leader>gx", "<CMD>DiffviewClose<CR>") -- TODO: We only need this when Diffview is open
 
 vim.keymap.set("n", "<leader>t", "", { desc = "Telescope" })
 vim.keymap.set("n", "<leader>tp", ":Telescope find_files<CR>")

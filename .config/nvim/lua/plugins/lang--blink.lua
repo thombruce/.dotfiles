@@ -44,6 +44,14 @@ return {
 
       -- (Default) Only show the documentation popup when manually triggered
       completion = {
+        list = {
+          selection = {
+            -- TODO: This is true by default but pre-selection interferes with AI
+            --       completion. It would be nice to have it be true when AI is disabled.
+            preselect = false,
+            auto_insert = true,
+          }
+        },
         menu = {
           -- auto_show = false,
 

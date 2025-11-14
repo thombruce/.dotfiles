@@ -17,7 +17,10 @@ vim.keymap.set({ 'n', 't' }, '<C-k>', '<C-w>k')
 vim.keymap.set({ 'n', 't' }, '<C-l>', '<C-w>l')
 -- And Split/Pane creation
 vim.keymap.set('n', '<C-y>', '<CMD>vsplit<CR>')
-vim.keymap.set('n', '<C-u>', '<CMD>split<CR>')
+-- vim.keymap.set('n', '<C-u>', '<CMD>split<CR>')
+-- NOTE: Conflicts with default half-page up motion
+--       I'm just disabling it for now, as I don't use splits
+--       in Neovim that much anyway, top/botton splits even less!
 
 vim.keymap.set("n", "<leader>s", "", { desc = "Settings" })
 vim.keymap.set("n", "<leader>sa", "<CMD>Codeium Toggle<CR>", { desc = "Toggle AI" })

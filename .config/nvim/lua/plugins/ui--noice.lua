@@ -24,6 +24,9 @@ return {
             -- ["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
           },
         },
+        presets = {
+          lsp_doc_border = true,
+        }
       })
     end,
   },

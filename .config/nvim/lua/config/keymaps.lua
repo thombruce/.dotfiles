@@ -28,7 +28,7 @@ vim.keymap.set('n', '<C-y>', '<CMD>vsplit<CR>')
 vim.keymap.set("n", "<leader>s", "", { desc = "Settings" })
 vim.keymap.set("n", "<leader>sa", "<CMD>Codeium Toggle<CR>", { desc = "Toggle AI" })
 
-vim.keymap.set("n", "<leader>q", ":quit<CR>", { desc = "Quit" })
+-- vim.keymap.set("n", "<leader>q", ":quit<CR>", { desc = "Quit" })
 
 -- vim.keymap.set("n", "<leader>w", "", { desc = "Writing modes..." })
 vim.keymap.set("n", "<leader>sc", ":NoNeckPain<CR>", { desc = "Toggle NoNeckPain" })
@@ -82,3 +82,16 @@ vim.keymap.set("n", "-", "<CMD>Oil --float<CR>", { desc = "Open parent directory
 
 -- Open Diffview with Ctrl+g
 vim.keymap.set("n", "<C-g>", ":DiffviewOpen<CR>")
+
+-- Quicker Keybinds
+vim.keymap.set("n", "<leader>q", function()
+  require("quicker").toggle()
+end, {
+  desc = "Toggle quickfix",
+})
+
+vim.keymap.set("n", "<leader>l", function()
+  require("quicker").toggle({ loclist = true })
+end, {
+  desc = "Toggle loclist",
+})

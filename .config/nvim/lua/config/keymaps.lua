@@ -83,6 +83,9 @@ vim.keymap.set("n", "-", "<CMD>Oil --float<CR>", { desc = "Open parent directory
 -- Open Diffview with Ctrl+g
 vim.keymap.set("n", "<C-g>", ":DiffviewOpen<CR>")
 
+-- Follow links in Markdown files
+vim.keymap.set("n", "<C-k>", "<CMD>ObsidianFollowLink<CR>")
+
 -- Quicker Keybinds
 vim.keymap.set("n", "<leader>q", function()
   require("quicker").toggle()

@@ -35,6 +35,7 @@
   "project.nvim": { "branch": "main", "commit": "30e0913d1f8ab8f05577033ec073bdb03f27e56e" },
   "quicker.nvim": { "branch": "master", "commit": "12a2291869a326424b1cbee937f4f80334433012" },
   "rainbow_csv": { "branch": "master", "commit": "3dbbfd7d17536aebfb80f571255548495574c32b" },
+  "render-markdown.nvim": { "branch": "main", "commit": "e6a5cf4edb228ebdab835252f1de19381ed41aa6" },
   "ripgrep": { "branch": "master", "commit": "57c190d56eedac90c061a238b63dbfed434fee50" },
   "telekasten.nvim": { "branch": "main", "commit": "0697efb39e24a1c9a66d3eaeac9e38fc06ebba5a" },
   "telescope-fzf-native.nvim": { "branch": "main", "commit": "6fea601bd2b694c6f2ae08a6c6fab14930c60e2c" },

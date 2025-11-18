@@ -22,6 +22,9 @@ return {
       ui = {
         enable = false,
       },
+      daily_notes = {
+        folder = "daily",
+      },
     },
   },
 }

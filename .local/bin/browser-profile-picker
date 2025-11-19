@@ -1,0 +1,17 @@
+#!/bin/bash
+
+clear
+
+declare -A profiles
+
+profiles=(
+  ["🏠️ Thom Bruce"]="helium-browser --profile-directory=\"Default\""
+  ["💼 Work: One"]="helium-browser --profile-directory=\"Profile 1\""
+  ["🕵️‍♂️ Private"]="helium-browser --incognito"
+)
+
+PROFILE=$(gum choose "${!profiles[@]}")
+
+[[ $PROFILE == "" ]] && exit 1
+
+eval "${profiles[$PROFILE]}"

@@ -50,14 +50,6 @@ _Perhaps I can also automate this using `yadm bootstrap` (note that the script s
 meaning any such automation should **either** install or update [or do nothing]--it should be runnable
 on existing setups)._
 
-## TODO
-
-- [x] Install Zsh (I prefer it; I like the configurability of Zsh)
-- [x] Install Vim (this file was edited in Vi - similar, but different enough to be confusing)
-- [x] Install Neovim (why Vi, Vim and Neovim? Vi because it was the default for visudo [note: I also had to install sudo], Vim because it's better than Vi and a solid fallback that exists in most distros, Neovim because it kicks ass!)
-
-_I've also already installed git, but this is not yet connected to my GitHub profile or any remote repositories._
-
 ## Notes
 
 ### On configuring caps lock to function as Esc or Ctrl...

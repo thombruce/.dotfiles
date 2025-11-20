@@ -11,7 +11,8 @@ vim.opt.clipboard = "unnamedplus"
 vim.keymap.set("n", "<C-q>", "<CMD>quit<CR>")
 
 -- Use Esc to enter insert mode as well as exit (treat it like a toggle)
-vim.keymap.set("n", "<Esc>", "i")
+-- vim.keymap.set("n", "<Esc>", "i")
+-- NOTE: Disabled as it seems to be more annoying than it is a convenience
 
 -- Split/Pane Navigation
 vim.keymap.set({ 'n', 't' }, '<C-h>', '<C-w>h')

@@ -5,13 +5,19 @@ clear
 declare -A profiles
 
 profiles=(
-  ["🏠️ Thom Bruce"]="helium-browser --profile-directory=\"Default\""
-  ["💼 Work: One"]="helium-browser --profile-directory=\"Profile 1\""
-  ["🕵️‍♂️ Private"]="helium-browser --incognito"
+  ["🏠️ Thom Bruce"]="--profile-directory=\"Default\""
+  ["💼 Work: One"]="--profile-directory=\"Profile 1\""
+  ["🕵️‍♂️ Private"]="--incognito"
 )
 
 PROFILE=$(gum choose "${!profiles[@]}")
 
 [[ $PROFILE == "" ]] && exit 1
 
-eval "${profiles[$PROFILE]}"
+# TODO: At present, this only works without printing
+# an error to the menu's terminal window (which then persists
+# after the application is open) IF a browser window is already
+# open. The Hyprland execution opens without issue... It's exec
+# function is DEFINITELY do something different (we knew this; eval
+# is a hacky solution meant to avoid an if/else).
+eval "helium-browser ${profiles[$PROFILE]}"

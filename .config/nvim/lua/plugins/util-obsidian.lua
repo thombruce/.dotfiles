@@ -25,6 +25,7 @@ return {
       daily_notes = {
         folder = "daily",
       },
+      legacy_commands = false,
     },
   },
 }

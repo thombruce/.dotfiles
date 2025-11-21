@@ -85,7 +85,7 @@ vim.keymap.set("n", "-", "<CMD>Oil --float<CR>", { desc = "Open parent directory
 vim.keymap.set("n", "<C-g>", ":DiffviewOpen<CR>")
 
 -- Follow links in Markdown files
-vim.keymap.set("n", "<C-k>", "<CMD>ObsidianFollowLink<CR>")
+vim.keymap.set("n", "<C-k>", "<CMD>Obsidian follow_link<CR>")
 
 -- Quicker Keybinds
 vim.keymap.set("n", "<leader>q", function()

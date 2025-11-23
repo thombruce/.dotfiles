@@ -122,3 +122,7 @@ export PATH="$PATH:/home/thombruce/.local/bin"
 
 # Add .cargo/bin to path to run Rust programs
 export PATH="$PATH:$HOME/.cargo/bin"
+
+. "$HOME/.atuin/bin/env"
+
+eval "$(atuin init zsh)"

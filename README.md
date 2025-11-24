@@ -1,10 +1,13 @@
 # .dotfiles
 
-These are my .dotfiles (configuration files from the home directory in my new Arch Linux environment).
+## About
 
-Ah, that's right! I've just installed Arch Linux! What a rush!!
+These are my .dotfiles, intended as a way to get up and running quickly in a new operating system.
 
-My aim is to gradually enhance this environment, sharing my non-private configuration here as I add to it.
+Presently, they contain non-agnostic configurations for an Arch Linux installation running the Hyprland window compositor.
+
+Configurations are also included for a number of programs that must be manually installed. In future, I intend to include
+installation scripts that will idempotently handle this for me (at least where the installed programs are not hardware-specific).
 
 ## Useful Commands
 

@@ -13,6 +13,7 @@ PATH="$HOME/.local/bin:$PATH"
 export npm_config_prefix="$HOME/.local"
 
 export EDITOR='/usr/bin/nvim'
+export BROWSER='helium-browser'
 
 export DOOMWADDIR="${HOME}/Games/DOOM/WADs"
 

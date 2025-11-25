@@ -15,6 +15,7 @@ x-scheme-handler/http=helium-browser.desktop
 x-scheme-handler/https=helium-browser.desktop
 x-scheme-handler/about=helium-browser.desktop
 x-scheme-handler/unknown=helium-browser.desktop
+application/pdf=org.pwmt.zathura.desktop
 
 [Added Associations]
 x-scheme-handler/mailto=userapp-Thunderbird-GLE8D3.desktop;

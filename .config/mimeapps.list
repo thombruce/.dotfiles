@@ -16,6 +16,11 @@ x-scheme-handler/https=helium-browser.desktop
 x-scheme-handler/about=helium-browser.desktop
 x-scheme-handler/unknown=helium-browser.desktop
 application/pdf=org.pwmt.zathura.desktop
+# Below required that perl-file-mimeinfo be installed
+# Also... yazi still isn't opening in the right program.
+# xdg-open **is**, which yazi is supposed to use...
+# TODO: Take another look at this.
+application/vnd.comicbook-rar=org.pwmt.zathura.desktop
 
 [Added Associations]
 x-scheme-handler/mailto=userapp-Thunderbird-GLE8D3.desktop;

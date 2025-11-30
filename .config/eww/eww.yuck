@@ -1,0 +1,13 @@
+(defwidget battery-widget []
+  (box
+    :orientation "v"
+    :halign "start"
+    :valign "start"
+    (label :xalign 0 :markup "<span font_size=\"large\">Battery</span>")
+    (label :xalign 0 :text "${EWW_BATTERY.BAT0.capacity}%")))
+
+(defwindow battery-widget
+  :monitor 0
+  :stacking "fg"
+  :geometry (geometry :x "8px" :y "32px" :width "100px" :anchor "bottom right")
+  (battery-widget))

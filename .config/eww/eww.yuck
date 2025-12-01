@@ -1,13 +1,61 @@
-(defwidget battery-widget []
+; TODO: Setup a toggle for the dashboard that
+; opens dashboard-widget if it is not open and
+; closes dashboard-widget if it is.
+; Having to type `eww open/close dashboard-widget`
+; is not ideal.
+
+; TODO: Add...
+; - Network/WiFi Status
+; - VPN Status
+; - Workspace info (current and open)
+; - EWW_TEMPS
+; - EWW_RAM
+; - EWW_CPU
+; - EWW_DISK
+; - EWW_NET (if not redundant next to Network/WiFi)
+; - Date/Calendar
+; - Bluetooth info ???
+; - Currently Playing Media (maybe)
+; - Volume (Mic and Speakers/Headphones)
+; - Screen Brightness
+
+(defwidget dashboard-widget []
   (box
     :orientation "v"
-    :halign "start"
+    :halign "center"
     :valign "start"
-    (label :xalign 0 :markup "<span font_size=\"large\">Battery</span>")
-    (label :xalign 0 :text "${EWW_BATTERY.BAT0.capacity}%")))
+    (label :xalign 0.5 :markup "<span font_family=\"monospace\" font_size=\"xx-large\">${formattime(EWW_TIME, '%H:%M:%S')}</span>" :justify "center")
+    (label :xalign 0.5 :text "    ${EWW_BATTERY.BAT0.capacity}%")))
 
-(defwindow battery-widget
+; (defwidget time-widget []
+;   (box
+;     :orientation "v"
+;     :halign "start"
+;     :valign "start"
+;     (label :xalign 0 :markup "<span font_size=\"large\">Time</span>")
+;     (label :xalign 0 :text "${formattime(EWW_TIME, '%H:%M:%S')}")))
+
+(defwindow dashboard-widget
   :monitor 0
   :stacking "fg"
-  :geometry (geometry :x "8px" :y "32px" :width "100px" :anchor "bottom right")
-  (battery-widget))
+  ; :focusable true
+  :geometry (geometry :x "50%" :y "50%" :anchor "center")
+  (dashboard-widget))
+
+; (defwindow time-widget
+;   :monitor 0
+;   :stacking "fg"
+;   :geometry (geometry :x "8px" :y "128px" :width "100px" :anchor "bottom right")
+;   (time-widget))
+
+; Add more magic variables per the docs here: https://elkowar.github.io/eww/magic-vars.html
+; If you want to display VPN country, you will have to query nordvpn directly
+; If you want to be VPN-agnostic... well, that will be more complicated.
+; For my own purposes, I am happy to simply query nordvpn directly
+; It looks like the only way to obtain that info is `nordvpn status`
+; This spits out a lot of other information too, so we will have to parse it and match the relevant details
+; Those details being "Status: Connected" and "Country: *"
+
+; A note about the battery icon I've just added too:
+; Consider displaying different icon per the current level of battery.
+; Alternatively consider displaying some kind of depleting progress bar via CSS

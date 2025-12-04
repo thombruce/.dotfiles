@@ -1,8 +1,21 @@
 .dashboard-widget {
   color: rgba(250, 250, 250, 0.75);
   padding: 5px 10px;
+  font-family: "JetBrains Mono Nerd Font", "JetBrains Mono", monospace;
+  font-size: 3rem;
 
   &.background {
-    background: #111 /*none*/;
+    background: transparent;
+    /*none*/
+    ;
+  }
+
+  label.time {
+    font-size: 5rem;
+    color: #d0d0ff;
+  }
+
+  label:nth-child(2) {
+    color: #1ac544;
   }
 }

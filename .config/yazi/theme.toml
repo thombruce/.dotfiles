@@ -761,6 +761,7 @@ prepend_dirs = [
   { name = "Documents", text = "" },
   { name = "Dropbox", text = "" },
   { name = "Games", text = "󰯉" },
+  { name = "Mail", text = "󰇮" },
   { name = "Music", text = "" },
   { name = "Videos", text = "" },
 ]

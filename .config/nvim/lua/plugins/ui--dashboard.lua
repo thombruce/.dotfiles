@@ -17,7 +17,7 @@ return {
               desc = 'Files',
               icon_hl = 'Label',
               group = 'Label',
-              action = 'Telescope find_files cwd=', -- 'Oil --float ',
+              action = 'Yazi', -- 'Telescope find_files cwd=', -- 'Oil --float ',
               key = '-',
             },
             -- TODO: Add live_grep to shortcuts for current directory

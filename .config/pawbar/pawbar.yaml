@@ -1,0 +1,19 @@
+left:
+  - ws
+  - sep
+  - title
+
+right:
+  - cpu
+  - space
+  - ram
+  - sep
+  - backlight
+  - space
+  - volume
+  - sep
+  - wifi
+  - space
+  - battery
+  - sep
+  - clock

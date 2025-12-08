@@ -13,7 +13,7 @@ right:
   - volume
   - sep
   - wifi
-  - space
+  - sep
   - battery
   - sep
   - clock

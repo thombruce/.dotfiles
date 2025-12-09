@@ -1,0 +1,137 @@
+# Source: https://seniormars.com/posts/neomutt/
+
+# NOTE: I have made it as far as 'External programs', which I have not yet setup.
+# (I have already handled some of the encryption part [passwords, for instance, are now encrypted and sourced below])
+
+# ALSO NOTE: There is an 'Update' section with 'New Tools' for getting email to work offline!
+# This is valuable, but I am skipping the step for now.
+
+# FINALLY: No idea where my mail is stored (perhaps it is not at the moment - see above about 'New Tools' and working offline).
+# I do have a Mail/ dir ready to recieve my emails for offline storage.
+
+source "gpg -dq ~/.config/mutt/passwords.gpg |"
+
+source ~/.config/mutt/theme.muttrc
+
+source ~/.config/mutt/personal.muttrc
+
+mailboxes =Important =Starred =Drafts ="Sent Mail" =Spam =Trash
+
+# Signature
+set signature = "~/.config/mutt/signature"
+
+# Where to put the stuff
+set header_cache = "~/.cache/mutt/headers"
+set message_cachedir = "~/.cache/mutt/bodies"
+set certificate_file = "~/.cache/mutt/certificates"
+unset record
+
+# settings
+set pager_index_lines = 10          
+set pager_context = 3                # show 3 lines of context
+set pager_stop                       # stop at end of message
+set menu_scroll                      # scroll menu
+set tilde                            # use ~ to pad mutt
+set move=no                          # don't move messages when marking as read
+set mail_check = 30                  # check for new mail every 30 seconds
+set imap_keepalive = 900             # 15 minutes
+set sleep_time = 0                   # don't sleep when idle
+set wait_key = no		     # mutt won't ask "press key to continue"
+set envelope_from                    # which from?
+set edit_headers                     # show headers when composing
+set fast_reply                       # skip to compose when replying
+set askcc                            # ask for CC:
+set fcc_attach                       # save attachments with the body
+set forward_format = "Fwd: %s"       # format of subject when forwarding
+set forward_decode                   # decode when forwarding
+set forward_quote                    # include message in forwards
+set mime_forward                     # forward attachments as part of body
+set attribution = "On %d, %n wrote:" # format of quoting header
+set reply_to                         # reply to Reply to: field
+set reverse_name                     # reply as whomever it was to
+set include                          # include message in replies
+set text_flowed=yes                  # correct indentation for plain text
+unset sig_dashes                     # no dashes before sig
+unset markers
+
+# Sort by newest conversation first.
+set charset = "utf-8"
+set uncollapse_jump
+set sort_re
+set sort = reverse-threads
+set sort_aux = last-date-received
+# How we reply and quote emails.
+set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
+set quote_regexp = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
+
+#sidebar
+set sidebar_visible # comment to disable sidebar by default
+set sidebar_short_path
+set sidebar_folder_indent
+set sidebar_format = "%B %* [%?N?%N / ?%S]"
+set mail_check_stats
+bind index,pager \CK sidebar-prev
+bind index,pager \CJ sidebar-next
+bind index,pager \CE sidebar-open
+bind index,pager B sidebar-toggle-visible
+
+# Editor
+set editor = "nvim"
+
+# Encryption
+# Use GPGME
+# Use my key for signing and encrypting
+# PGP key moved to personal.muttrc
+
+# Use GPGME
+set crypt_use_gpgme = yes
+
+# Automatically sign all out-going email
+set crypt_autosign = yes
+
+# Sign replies to signed emails
+set crypt_replysign = yes
+
+# Encrypt replies to encrypted emails
+set crypt_replyencrypt = yes
+
+# Encrypt and sign replies to encrypted and signed email
+set crypt_replysignencrypted = yes
+
+# Attempt to verify signatures automatically
+set crypt_verify_sig = yes
+
+# Attempt to encrypt automatically, if possible
+# I would recommend setting this to no as university often have spam filters
+# And this will cause your emails to be marked as spam
+# as they can't decrypt your emails LMAO
+set crypt_opportunistic_encrypt = no
+
+# So you can view encrypted emails automatically
+auto_view application/pgp-encrypted
+
+# Keybindings (Vim-like)
+macro index A \
+    "<tag-pattern>~N<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" \
+    "mark all new as read"
+
+bind index j next-entry
+bind index k previous-entry
+bind pager j next-line
+bind pager k previous-line
+
+bind attach,index,pager \CD next-page
+bind attach,index,pager \CU previous-page
+bind pager g top
+bind pager G bottom
+bind attach,index g first-entry
+bind attach,index G last-entry
+
+# mailcap
+# link to mailcap file
+set mailcap_path = "~/.config/mutt/mailcap"
+# open attachments with mailcap with <return>
+bind attach <return> view-mailcap             
+# save attachments to a folder
+macro attach s '<save-entry> <bol>~/Downloads/<eol>' 'save attachment'
+auto_view text/html		# automatically show html (mailcap uses lynx)

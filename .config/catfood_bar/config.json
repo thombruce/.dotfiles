@@ -1,0 +1,31 @@
+{
+  "bars": {
+    "left": [
+      "workspaces",
+      "windows"
+    ],
+    "middle": [
+      "time",
+      "separator",
+      "weather"
+    ],
+    "right": [
+      "temperature",
+      "space",
+      "cpu",
+      "space",
+      "ram",
+      "separator",
+      "wifi",
+      "space",
+      "lua_vpn",
+      "separator",
+      "brightness",
+      "space",
+      "volume",
+      "separator",
+      "battery"
+    ]
+  },
+  "colorize": true
+}

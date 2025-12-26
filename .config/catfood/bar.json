@@ -16,7 +16,13 @@
       "space",
       "ram",
       "separator",
-      "wifi",
+      {
+        "name": "wifi",
+        "sparkline": true,
+        "sparkline_length": 5,
+        "sparkline_update_freq": 2,
+        "sparkline_logarithmic": true
+      },
       "space",
       "lua_vpn",
       "separator",

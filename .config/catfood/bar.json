@@ -2,7 +2,10 @@
   "bars": {
     "left": [
       "workspaces",
-      "windows"
+      "space",
+      "windows",
+      "space",
+      "kitty_tabs"
     ],
     "middle": [
       "time",
@@ -33,5 +36,7 @@
       "battery"
     ]
   },
-  "colorize": true
+  "colorize": true,
+  "day_start": 6,
+  "night_start": 18
 }

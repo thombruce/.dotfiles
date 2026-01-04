@@ -79,7 +79,7 @@ vim.keymap.set("n", "<C-f>", "<cmd>Telescope live_grep<CR>")
 vim.keymap.set("n", [[<C-\>]], ":ToggleTerm<CR>")
 
 -- Open Oil File Explorer / Editor with "-" key
-vim.keymap.set("n", "-", "<CMD>Oil --float<CR>", { desc = "Open parent directory" })
+vim.keymap.set("n", "-", "<CMD>Oil --float<CR>", { desc = "Edit directory in Oil buffer" })
 
 -- Open Diffview with Ctrl+g
 vim.keymap.set("n", "<C-g>", ":DiffviewOpen<CR>")

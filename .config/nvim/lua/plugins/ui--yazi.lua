@@ -31,6 +31,22 @@ return {
     opts = {
       -- if you want to open yazi instead of netrw, see below for more info
       open_for_directories = false,
+
+      -- the floating window scaling factor. 1 means 100%, 0.9 means 90%, etc.
+      floating_window_scaling_factor = 1.0,
+
+      -- the transparency of the yazi floating window (0-100). See :h winblend
+      -- yazi_floating_window_winblend = 0,
+
+      -- the type of border to use for the floating window. Can be many values,
+      -- including 'none', 'rounded', 'single', 'double', 'shadow', etc. For
+      -- more information, see :h nvim_open_win
+      yazi_floating_window_border = "none",
+
+      -- the zindex of the yazi floating window. Can be used to make the yazi
+      -- window fullscreen. See `:h nvim_open_win()` for more information.
+      -- yazi_floating_window_zindex = nil,
+
       keymaps = {
         show_help = "<f1>",
       },

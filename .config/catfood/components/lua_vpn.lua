@@ -2,8 +2,10 @@ return {
   config = {
     update_interval = 5000
   },
+
   update = function()
   end,
+
   render = function(colorize)
     local country_codes = {
       ["United States"] = "US",
@@ -65,8 +67,10 @@ return {
       ["Hong Kong"] = "HK",
       ["Taiwan"] = "TW"
     }
+
     local status, country, short = "disconnected", "", "--"
     local handle = io.popen("nordvpn status 2>/dev/null")
+
     if handle then
       local output = handle:read("*a")
       handle:close()
@@ -86,7 +90,9 @@ return {
         end
       end
     end
+
     local text = " " .. short
+
     if colorize then
       local color = status == "disconnected" and "dark_gray" or "magenta"
       return { text, color }

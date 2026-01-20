@@ -27,6 +27,8 @@ alias vi='vim'
 alias vim='nvim'
 alias code='nvim'
 
+alias zed='zeditor'
+
 alias sc-im="TERM=xterm-256color sc-im"
 
 # Use `icat [image path]` to open an image in Kitty terminal

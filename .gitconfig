@@ -8,10 +8,19 @@
 [push]
 	autoSetupRemote = true
 [alias]
-	s = status
-	co = checkout
   info = !which onefetch && onefetch
-	graph = !serie # log --graph --format=\"%C(auto)%h %d %s %Cblue%an\" --decorate
+  i = info
+
+	s = status
+  co = checkout
+
+  wt = worktree
+  wta = wt add
+  wtl = wt list
+  wtr = wt remove
+  wtd = wtr
+
+  graph = !serie # log --graph --format=\"%C(auto)%h %d %s %Cblue%an\" --decorate
 
 [core]
   pager = delta

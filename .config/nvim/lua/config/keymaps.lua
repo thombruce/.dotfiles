@@ -1,35 +1,6 @@
--- Show line number and numbers relative to current line in buffer
-vim.wo.number = true
-vim.wo.relativenumber = true
--- Tab Settings (We prefer spaces!)
-vim.o.expandtab = true   -- expand tab input with spaces characters
-vim.o.smartindent = true -- syntax aware indentations for newline inserts
-vim.o.tabstop = 2        -- num of space characters per tab
-vim.o.shiftwidth = 2     -- spaces per indentation level
-
--- Set default border for floating windows
-vim.opt.winborder = "rounded"
--- Automatically read changes in real time as files are updated
-vim.opt.autoread = true
-
--- highlight yank
-vim.api.nvim_create_autocmd("TextYankPost", {
-    group = vim.api.nvim_create_augroup("highlight_yank", { clear = true }),
-    pattern = "*",
-    desc = "highlight selection on yank",
-    callback = function()
-        vim.highlight.on_yank({ timeout = 200, visual = true })
-    end,
-})
-
 -- Set leader key to space bar for quick access to custom
 -- operations
 vim.g.mapleader = " "
-
--- Set the clipboard so that [y]ank, [d]elete and [p]aste
--- operations will use the system clipboard
--- (requires win32yank to be installed on Windows)
-vim.opt.clipboard = "unnamedplus"
 
 -- Quick Quit or Close Current Pane/Window
 vim.keymap.set("n", "<C-q>", "<CMD>quit<CR>")

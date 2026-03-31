@@ -35,9 +35,9 @@ require('noice').setup({
 require("lualine").setup({
     options = {
         theme = 'catppuccin-nvim',
-        disabled_filetypes = { 'dashboard', 'toggleterm' },
+        disabled_filetypes = { '', 'oil' },
         section_separators = { left = '', right = '' },
-        component_separators = { left = "", right = "" },
+        component_separators = { left = '', right = '' },
         ignore_focus = { 'NvimTree' },
     },
     sections = {
@@ -50,7 +50,6 @@ require("lualine").setup({
           'buffers',
           filetype_names = {
             oil = 'Oil',
-            toggleterm = 'Terminal',
           },
           symbols = {
             alternate_file = false,

@@ -1,2 +1,3 @@
-require('options')
+require('config')
 require('plugins')
+require('lsp')

@@ -41,9 +41,39 @@ require('yadm-git').setup()
 
 require("mason").setup()
 
+-- Map .cal files to calchemy filetype
+vim.filetype.add({
+  extension = {
+    cal = 'calchemy',
+  },
+})
+
+-- Register calchemy parser BEFORE nvim-treesitter.setup()
+-- TODO: When tree-sitter-calchemy is published, remove this block and use :TSInstall calchemy
+require('nvim-treesitter.parsers').calchemy = {
+  install_info = {
+    path = '/home/thombruce/Development/tree-sitter-calchemy',
+    queries = 'queries/calchemy',
+  },
+}
+
+-- Add grammar directory to runtime path for queries
+vim.opt.runtimepath:prepend('/home/thombruce/Development/tree-sitter-calchemy')
+
+-- Set up nvim-treesitter
 require('nvim-treesitter').setup({
   ensure_installed = {},
+  -- auto_install = true,
   highlight = {
-      enable = true
+    enable = true,
+    -- additional_vim_regex_highlighting = { 'ruby', 'markdown' },
   },
+})
+
+-- Start treesitter for languages requiring explicit highlighting
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'calchemy', 'todotxt' },
+  callback = function()
+    vim.treesitter.start()
+  end,
 })
